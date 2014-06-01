@@ -27,25 +27,38 @@
             <div class="row">
                 <div class="col-lg-2 col-lg-offset-1"><br>
                     <p>
-                        <h3>Votre abonnement : </h3><h2><c:out value="${sessionScope.userAbo.nom}"></c:out></h2>
+                        <h3>Votre abonnement : </h3>
+                        <h2 class="tabulation"><c:out value="${sessionScope.userAbo.nom}"></c:out></h2>
+                        <br><br>
                     </p>
                 </div>
             </div>
         </c:if>
 
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <c:forEach var="a" items="${sessionScope['listeAbos']}">
-                <form action="ServletAbos" method="post">
-                    <button class="col-lg-2">
-                        <h1>${a.nom}</h1>
-                        <h1>${a.prix}<span class="glyphicon glyphicon-euro"></span></h1>
-                    </button>
-                    <input type="hidden" name="action" value="choixAbo">
-                    <input type="hidden" name="abo" value="${a.id}">
-                </form>
-            </c:forEach>
-        </div>
+    <div class="row">
+        <p>
+            <c:if test="${not empty sessionScope['login']}">
+                <h3 class="col-lg-3 col-lg-offset-1">Choisissez un abonnement : </h3>
+            </c:if>
+            <c:if test="${empty sessionScope['login']}">
+                <h3 class="col-lg-3 col-lg-offset-1">Liste des abonnements : </h3>
+            </c:if>
+        </p>
+    </div>
+        
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <c:forEach var="a" items="${sessionScope['listeAbos']}">
+            <form action="ServletAbos" method="post">
+                <button class="col-lg-2">
+                    <h1>${a.nom}</h1>
+                    <h1>${a.prix}<span class="glyphicon glyphicon-euro"></span></h1>
+                </button>
+                <input type="hidden" name="action" value="choixAbo">
+                <input type="hidden" name="abo" value="${a.id}">
+            </form>
+        </c:forEach>
+    </div>
 
-    </body>
+</body>
 </html>

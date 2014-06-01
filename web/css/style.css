@@ -10,6 +10,11 @@ body{
     text-align: center;
 }
 
-.menu-inscription a{
+.menu-inscription *{
     margin-top: 8px;
 }
+
+.tabulation{
+margin-left: 2em;
+}
+ 
