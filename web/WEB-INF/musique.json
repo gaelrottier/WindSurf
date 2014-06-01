@@ -1,0 +1,1856 @@
+[
+	{
+		"nom":"AC-DC - Highway To hell (live)",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drums 1 bass drum.mp3",
+			"Drums 2 Bass drum.mp3",
+			"Drums 3 snare.mp3",
+			"Drums 4 snare.mp3",
+			"Drums 5 hi-hat cymbals.mp3",
+			"Drums 6 hi-hat cymbals.mp3",
+			"Guitar 1 Malcolm.mp3",
+			"Guitar 2 Angus.mp3",
+			"Vocals 1 main.mp3",
+			"Vocals 2 Main.mp3",
+			"Vocals 3 backing vocals guitar overdubs.mp3",
+			"Vocals 4 backing vocals.mp3"
+		]
+	},
+	{
+		"nom":"AC-DC - Shoot To Thrills (live)",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drums 1 bass drum.mp3",
+			"Drums 2 bass drum.mp3",
+			"Drums 3 snare.mp3",
+			"Drums 4 snare.mp3",
+			"Drums 5 hi-hat cymbals.mp3",
+			"Drums 6 hi-hat snares.mp3",
+			"Guitar 1 Malcolm.mp3",
+			"Guitar 2 Angus.mp3",
+			"Guitar Overdubs over solo.mp3",
+			"Guitar overdubs over intro.mp3",
+			"Vocals 1 Main.mp3",
+			"Vocals 2 Main.mp3"
+		]
+	},
+	{
+		"nom":"AC-DC Back In Black (live)",
+		"composition":
+		[
+			"Backing guitar on solo.mp3",
+			"Backing vocals.mp3",
+			"Bass.mp3",
+			"Drum 2 bass drum.mp3",
+			"Drum 3 caisse claire.mp3",
+			"Drum 4 caisse claire.mp3",
+			"Drum 5 hi hat cymbals.mp3",
+			"Drum6 hi hat cymbals.mp3",
+			"Drums 1 bass drum.mp3",
+			"Guitar 1.mp3",
+			"Guitar 2.mp3",
+			"Voice 1.mp3",
+			"Voice 2.mp3"
+		]
+	},
+	{
+		"nom":"AC-DC Hell's Bells (live)",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drums 1 bass drum.mp3",
+			"Drums 2 bass drum.mp3",
+			"Drums 3 snare.mp3",
+			"Drums 4 snare.mp3",
+			"Drums 5 hi-hat cymbals.mp3",
+			"Drums 6 hi-hat cymbals.mp3",
+			"Guitar 1 Malcolm.mp3",
+			"Guitar 2 Angus.mp3",
+			"Guitar backing solo (Malcolm).mp3",
+			"Misc Bells etc.mp3",
+			"Vocals 1.mp3",
+			"Vocals 2.mp3"
+		]
+	},
+	{
+		"nom":"AC-DC You Shook Me All Night Long (live)",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drum 1 bass drum.mp3",
+			"Drums 2 bass drum.mp3",
+			"Drums 3 snare drum.mp3",
+			"Drums 4 snare drums.mp3",
+			"Drums 5 hi hat cymbals.mp3",
+			"Drums 5 hi-hat cymbals.mp3",
+			"Drums 6 hi-hat cymbals.mp3",
+			"Guitar 1 Malcolm.mp3",
+			"Guitar 1 Malcom.mp3",
+			"Guitar 2 Angus.mp3",
+			"Guitar backing on solo (Malcolm).mp3",
+			"Guitar backing solo (Malcolm) .mp3",
+			"Misc Bell crowd etc..mp3",
+			"Misc.mp3",
+			"Vocal main 1.mp3",
+			"Vocal main 2.mp3"
+		]
+	},
+	{
+		"nom":"AFI - Miss Murder",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Aerosmith - Back in the Saddle",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Aerosmith - Same Old Song and Dance",
+		"composition":
+		[
+			"guitar.ogg",
+			"notes.mid",
+			"rhythm.ogg",
+			"song.ini",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Aerosmith - Walk This Way (3 tracks)",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drums and Vocals.mp3",
+			"guitar.mp3"
+		]
+	},
+	{
+		"nom":"Alice Cooper - Billions Dollars Babies (3 tracks)",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drums + Vocals + misc.mp3",
+			"guitar.mp3"
+		]
+	},
+	{
+		"nom":"Alice Copper - I'm Eighteen",
+		"composition":
+		[
+			"Alice Cooper - I'm Eighteen 8.mp3",
+			"Alice Cooper - I'm Eighteen 9.mp3",
+			"Bass.mp3",
+			"Drums 1 bass drum.mp3",
+			"Drums 2 bass drum.mp3",
+			"Drums 3 snare.mp3",
+			"Drums 4 snare.mp3",
+			"Drums 5 hi-hat cymbals.mp3",
+			"Drums 6 hi-har cymbals.mp3",
+			"Drums 7 toms.mp3",
+			"Guitar 1.mp3",
+			"Guitar 2.mp3",
+			"Misc Harmonica + guitar overdubs 2.mp3",
+			"Misc harmonica + guitar overdubs 1.mp3",
+			"Vocal Main 1.mp3",
+			"Vocal Main 2.mp3"
+		]
+	},
+	{
+		"nom":"Alice Copper - School's Out",
+		"composition":
+		[
+			"Bass 1.mp3",
+			"Bass 2.mp3",
+			"Drum 1 bass drum.mp3",
+			"Drum 2 bass drum.mp3",
+			"Drum 3 snare.mp3",
+			"Drum 4 snare.mp3",
+			"Drum 5 hit-hat cymbals.mp3",
+			"Drum 6 hi-hat cymbals.mp3",
+			"Drums 7 Toms.mp3",
+			"Drums 8 toms.mp3",
+			"Guitar 1 rythm + solo.mp3",
+			"Guitar 2 rythm.mp3",
+			"Organ + Piano + guitar overdubs.mp3",
+			"Organ + overdubs guitar.mp3",
+			"Vocals 1 Main.mp3",
+			"Vocals 2 Main.mp3"
+		]
+	},
+	{
+		"nom":"Alice in Chains - Them Bones",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Anthrax - Caught in a Mosh",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Avenged Sevenfold - Almost Easy",
+		"composition":
+		[
+			"drums.ogg",
+			"guitar.ogg",
+			"notes.mid",
+			"rhythm.ogg",
+			"song.ini",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Avenged Sevenfold - Beast and the Harlot",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Beatles - A day in a life",
+		"composition":
+		[
+			"1 Vocals.mp3",
+			"2 Guitar + Piano.mp3",
+			"3 Guitar + orchestra.mp3",
+			"4 Bass + Drums.mp3"
+		]
+	},
+	{
+		"nom":"Beatles - Helter Skelter",
+		"composition":
+		[
+			"Bass-2.mp3",
+			"Bass.mp3",
+			"Drums 1 snare + hi-hat.mp3",
+			"Drums 2 snare + hi-hat.mp3",
+			"Guitar + vocals overdubs.mp3",
+			"Guitar 1.mp3",
+			"Guitar 2.mp3",
+			"Guitar overdubs 1.mp3",
+			"Vocals 1.mp3",
+			"Vocals 2.mp3"
+		]
+	},
+	{
+		"nom":"Beatles - Sgt Peppers Lonley Hearts Club Band",
+		"composition":
+		[
+			"1 - Crowd Noise.mp3",
+			"2 Backing instrus.mp3",
+			"3 Vocals.mp3",
+			"Lead Gtr + Horns.mp3",
+			"MultiTrack_Masters_Beatles_Sgt_Peppers_Lonely_Hearts.nfo"
+		]
+	},
+	{
+		"nom":"Beatles - Shes Leaving Home",
+		"composition":
+		[
+			"1 Strings 1.mp3",
+			"2 Strings 2.mp3",
+			"3 Paul Lead.mp3",
+			"4 Back. Vocals.mp3",
+			"MultiTrack_Masters_Beatles_Shes_Leaving_Home.nfo"
+		]
+	},
+	{
+		"nom":"Beatles - When Im 64",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"clarinette.mp3",
+			"clarinette.png",
+			"piano.mp3",
+			"piano.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Beatles - With A Little Help From My Friends",
+		"composition":
+		[
+			"1 Bass + Tamb.mp3",
+			"2 Backing instr.mp3",
+			"3 Ringo.mp3",
+			"4 Back. Vocals.mp3",
+			"MultiTrack_Masters_Beatles_With_A_Little_Help.nfo"
+		]
+	},
+	{
+		"nom":"Beatles - Yellow Submarine",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"extra.mp3",
+			"extra.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Billy Idol - White Wedding without vocals",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drum 1.mp3",
+			"Drum 2.mp3",
+			"Drum 3 hi-hat cymbals snare.mp3",
+			"Drums 4 hi-hat snare.mp3",
+			"Drums bass drum.mp3",
+			"Guitars.mp3"
+		]
+	},
+	{
+		"nom":"Blue Oyster Cult - Godzilla",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"rbconv.mid",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Bob Marley - Is This Love",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"choeurs1.mp3",
+			"choeurs1.png",
+			"choeurs2.mp3",
+			"choeurs2.png",
+			"extra.mp3",
+			"extra.png",
+			"guitare1.mp3",
+			"guitare1.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"guitare3.mp3",
+			"guitare3.png",
+			"oooh.mp3",
+			"oooh.png",
+			"orgue.mp3",
+			"orgue.png",
+			"piano.mp3",
+			"piano.png",
+			"rythme.mp3",
+			"rythme.png",
+			"saxo.mp3",
+			"saxo.png",
+			"trombone.mp3",
+			"trombone.png",
+			"trompette.mp3",
+			"trompette.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Boston  - More Than a Feeling",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Dandy Warhols - Mis Amigos",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drums + Percs.mp3",
+			"Guitar.mp3",
+			"Loops + Trumpet.mp3",
+			"Vocals.mp3"
+		]
+	},
+	{
+		"nom":"Danzig - Mother",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"David Bowies - Lets Dance",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Dead Kennedys - Holiday In Cambodia",
+		"composition":
+		[
+			"guitar.mp3",
+			"rhythm.mp3",
+			"song.mp3"
+		]
+	},
+	{
+		"nom":"Deep Purple - Highway Star",
+		"composition":
+		[
+			"1 Drums1.mp3",
+			"2 Drums2.mp3",
+			"3 Drums3.mp3",
+			"4 Drums4.mp3",
+			"5 Bass.mp3",
+			"6 Guitar1.mp3",
+			"7 Guitar2 + solo.mp3",
+			"8 Vocals.mp3",
+			"9 Guitar solo1 + Back. Instr..mp3"
+		]
+	},
+	{
+		"nom":"Deep Purple - Smoke On The Water",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Depeche Mode - never Let Me Down Again",
+		"composition":
+		[
+			"batterie.mp3",
+			"batterie.png",
+			"clavier.mp3",
+			"clavier.png",
+			"clavier2.mp3",
+			"clavier2.png",
+			"piano.mp3",
+			"piano.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Dire Straits - Sultans of Swing",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Doors - Love Me Two Times",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"clavecin.mp3",
+			"clavecin.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"DragonForce  - Through the Fire and Flames",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Eagles - Hotel California",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Extreme  - Play With Me",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Foo Fighters - Monkey Wrench",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Franz Ferdinand - Take Me Out",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Guns and Roses - Welcome to the jungle",
+		"composition":
+		[
+			"1 drums + others.mp3",
+			"2 Vocals + drums.mp3",
+			"3 Guitar rythm.mp3",
+			"4 Guitar solo.mp3",
+			"5 Bass.mp3",
+			"6 Bass.mp3"
+		]
+	},
+	{
+		"nom":"Heart  - Barracuda",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Helmet  - Unsung [Live]",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Hey You (The Exies)",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Incubus  - Stellar",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Iron Maiden - The Trooper",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"James Brown - Sex Machine",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"extra.mp3",
+			"extra.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Jane's Addiction - Stop!",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Jimi Hendrix - Castles Made of Sand",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"extra.mp3",
+			"extra.png",
+			"guitare.mp3",
+			"guitare.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Joan Jett and the Blackhearts - I Love Rock 'n Roll",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"rbconv.mid",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Judas Priest - Screaming For Vengeance",
+		"composition":
+		[
+			"01 Judas Priest - Hellion-Electric Eye.mogg",
+			"03 Judas Priest - Riding On The Wind.mogg",
+			"04 Judas Priest - Bloodstone.mogg",
+			"05 Judas Priest - (Take These) Chains.mogg",
+			"06 Judas Priest - Pain And Pleasure.mogg",
+			"07 Judas Priest - Screaming For Vengeance.mogg",
+			"08 Judas Priest - You Got Another Thing Comin'.mogg",
+			"09 Judas Priest - Fever.mogg",
+			"10 Judas Priest - Devil's Child.mogg"
+		]
+	},
+	{
+		"nom":"Judas Priest - The Hellion, Electric Eye",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Kansas - Carry On Wayward Son",
+		"composition":
+		[
+			"Guitar Hero Smash Hits - Complete Multitrack Audio.htm",
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Kiss - Rock and Roll All Nite",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Lamb of God - Laid to Rest",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Led Zeppelin - Heartbreaker 3 takes",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drum Left.mp3",
+			"Drum Right.mp3",
+			"Guitar + Bass + Drums.mp3",
+			"Guitar 1.mp3",
+			"Guitar 2.mp3",
+			"Vocals + Guitar.mp3",
+			"Vocals.mp3"
+		]
+	},
+	{
+		"nom":"Led Zeppelin - Ramble On",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drum Left.mp3",
+			"Drum Right.mp3",
+			"Guitar 1.mp3",
+			"Guitar 2.mp3",
+			"Guitar 3.mp3",
+			"Vocals + Guitar.mp3",
+			"Vocals.mp3"
+		]
+	},
+	{
+		"nom":"Led Zeppelin - What Is And What Should Never Be",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drum Left.mp3",
+			"Drum Right.mp3",
+			"Guitar + Vocals.mp3",
+			"Guitar 1.mp3",
+			"Vocals 1.mp3",
+			"Vocals 2.mp3",
+			"Vocals 3.mp3"
+		]
+	},
+	{
+		"nom":"Les Zeppelin - Whole Lotta Love",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drum Left.mp3",
+			"Drum Right.mp3",
+			"Guitar 1.mp3",
+			"Guitar 2.mp3",
+			"Percussion.mp3",
+			"Vocals 1.mp3",
+			"Vocals 2.mp3"
+		]
+	},
+	{
+		"nom":"Living Colour - Cult of Personality",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Lynyrd Skynyrd - Free Bird",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Megadeath - Peace Sells",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Metallica - Enter Sandman (4 Trcks)",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Metallica - Enter Sandman (9 Trcks)",
+		"composition":
+		[
+			"Bass.mp3",
+			"Drums 1.mp3",
+			"Drums 2.mp3",
+			"Drums 3.mp3",
+			"Drums 4.mp3",
+			"Guitar 1.mp3",
+			"Guitar 2.mp3",
+			"Vocal 2 + extras.mp3",
+			"Vocal.mp3"
+		]
+	},
+	{
+		"nom":"Metallica - One",
+		"composition":
+		[
+			"guitar.ogg",
+			"label.png",
+			"notes.mid",
+			"rhythm.ogg",
+			"song.ini",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Michael jackson - Beat It",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"synthes.mp3",
+			"synthes.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Motorhead - The Ace Osf Spades",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Mountain - Mississipi Queen",
+		"composition":
+		[
+			"1 Kicks.mp3",
+			"2 Snare.mp3",
+			"3 Hit Hat.mp3",
+			"4 Hit Hat + Bell + snare.mp3",
+			"5 Guitar 1.mp3",
+			"6 Guitar 2.mp3",
+			"7 Vocal.mp3",
+			"8 Bass.mp3",
+			"9 Guitar 3.mp3"
+		]
+	},
+	{
+		"nom":"Muse - Uprising",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Nirvana - Smell Like Teen Spirit",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Offspring - Come Out And Play",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Ozzy Osbourne - Bark at the Moon",
+		"composition":
+		[
+			"Guitar Hero Smash Hits - Complete Multitrack Audio.htm",
+			"Nirvana - Heart Shaped Box",
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"rbconv.mid",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Ozzy Osbourne - Bark at the Moon/Nirvana - Heart Shaped Box",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Pantera  - Cowboys from Hell [Live]",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"rbconv.mid",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Pat Benatar - Hit Me With Your Best Shot",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Pearl Jam - Even Flow",
+		"composition":
+		[
+			"guitar.ogg",
+			"label.png",
+			"notes.mid",
+			"rhythm.ogg",
+			"song.ini",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Poison - Nothin' but a Good Time",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Priestess - Lay Down",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Queen - Bohemian Rhapsody (24 trks)",
+		"composition":
+		[
+			"1 Harmony Vocals.mp3",
+			"10 Piano.mp3",
+			"11 Piano.mp3",
+			"12 Main V. + Guitar.mp3",
+			"13 Main V + Guitar.mp3",
+			"14 Main V + Guitar.mp3",
+			"15 Main V + Guitar.mp3",
+			"16 Main V + Extras.mp3",
+			"17 Main V + Extras.mp3",
+			"18 Main V + Extras.mp3",
+			"19 Main V + Extras.mp3",
+			"2 Harmony Vocals.mp3",
+			"20 Main V + Extras.mp3",
+			"21 Main V + Extras.mp3",
+			"22 Main V + Extras.mp3",
+			"23 Extras.mp3",
+			"24 Extras.mp3",
+			"3 Back Vocals + Drums.mp3",
+			"4 Backing Vocals + Drums.mp3",
+			"5 Drums.mp3",
+			"6 Drums.mp3",
+			"7 Bass.mp3",
+			"8 Bass.mp3",
+			"9 Bass.mp3"
+		]
+	},
+	{
+		"nom":"Queen - Don't Stop Me Now",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"choeurs.mp3",
+			"choeurs.png",
+			"guitare.mp3",
+			"guitare.png",
+			"piano.mp3",
+			"piano.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Queen - Killer Queen",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"rbconv.mid",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Queen - We Are The Champions",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"piano.mp3",
+			"piano.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Queens of the Stone Age - No One Knows",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"R.E.M - Losing My Religion",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Radiohead - Creep",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"extra.mp3",
+			"extra.png",
+			"guitare.mp3",
+			"guitare.png",
+			"public.mp3",
+			"public.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Rage Against The Machine - Killing in the name",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Rage Against the Machine - Bulls on Parade",
+		"composition":
+		[
+			"guitar.ogg",
+			"notes.mid",
+			"rhythm.ogg",
+			"song.ini",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Ram Jam - Black Betty",
+		"composition":
+		[
+			"Bass 1.mp3",
+			"Bass 2.mp3",
+			"Drums 1 bass drum.mp3",
+			"Drums 2 bass drum.mp3",
+			"Drums 3 snare.mp3",
+			"Drums 4 snare.mp3",
+			"Drums 5 hi-hat cymbals.mp3",
+			"Drums 6 hi-hat cymbals.mp3",
+			"Drums 7 toms.mp3",
+			"Drums 8 toms.mp3",
+			"Guitar 1.mp3",
+			"Guitar 2.mp3",
+			"Guitar 3.mp3",
+			"Guitar 4.mp3",
+			"Vocals 1.mp3",
+			"Vocals 2.mp3"
+		]
+	},
+	{
+		"nom":"Ramones - I Wanna Be Sedated",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Ramones - Rockaway Beach",
+		"composition":
+		[
+			"Backing vocals.mp3",
+			"Basse.mp3",
+			"Drums 1.mp3",
+			"Drums 2.mp3",
+			"Drums 3.mp3",
+			"Drums 4.mp3",
+			"Guitare 1.mp3",
+			"Guitare 2.mp3",
+			"Vocal.mp3"
+		]
+	},
+	{
+		"nom":"Ratt  - Round and Round",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Red Hot Chili Peppers - Suck My Kiss",
+		"composition":
+		[
+			"guitar.ogg",
+			"label.png",
+			"notes.mid",
+			"rhythm.ogg",
+			"song.ini",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Red Hot Chili Peppers - Under The Bridge",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"extra.mp3",
+			"extra.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Red Hot chili Peppers - Give It Away",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"extra.mp3",
+			"extra.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Rush  - YYZ",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Santana - Black Magic Woman",
+		"composition":
+		[
+			"Bass.mp3",
+			"Guitar 1.mp3",
+			"Guitar 2.mp3",
+			"Keyboard 1.mp3",
+			"Keyboard 2.mp3",
+			"Percussions 1.mp3",
+			"Percussions 2.mp3",
+			"Percussions 3.mp3",
+			"Percussions 4.mp3",
+			"Percussions 5.mp3",
+			"Vocals 1.mp3",
+			"Vocals 2.mp3"
+		]
+	},
+	{
+		"nom":"Simon and Garfunkel - the Sound Of Silence",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"garfunkel.mp3",
+			"garfunkel.png",
+			"guitare.mp3",
+			"guitare.png",
+			"simon.mp3",
+			"simon.png"
+		]
+	},
+	{
+		"nom":"Slayer - Raining Blood",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Smashing Pumpkins - Zero",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"extra.mp3",
+			"extra.png",
+			"guitare1.mp3",
+			"guitare1.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Soundgarden - Black Hole Sun",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Spice Girls - Wannabe",
+		"composition":
+		[
+			"clavier.mp3",
+			"clavier.png",
+			"orgue.mp3",
+			"orgue.png",
+			"rythme.mp3",
+			"rythme.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Stevie Wonder - Superstition",
+		"composition":
+		[
+			"Bass.mp3",
+			"Brass 1.mp3",
+			"Brass 2 trumpet.mp3",
+			"Drum 1 bass drum.mp3",
+			"Drum 2 hi-hat snare.mp3",
+			"Drum 3 hi-hat snare.mp3",
+			"Keyboard 1 clavinet.mp3",
+			"Keyboard 2 clavinet.mp3",
+			"Keyboard 3 clavinet.mp3",
+			"Keyboard 4 clavinet.mp3",
+			"Keyboard 5 clavinet.mp3",
+			"Keyboard 6 clavinet.mp3",
+			"Keyboard 7 clavinet.mp3",
+			"Keyboard 8 clavinet.mp3",
+			"Vocal 1 main.mp3",
+			"Vocal 2 main.mp3"
+		]
+	},
+	{
+		"nom":"Stone Temple Pilots - Trippin' on a Hole in a Paper Heart",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Sublime - What I Got",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"System Of A Down - Chop Suey!",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"The Cars - The Cars",
+		"composition":
+		[
+			"01 The Cars - Good Times Roll.mogg",
+			"02 The Cars - My Best Friend's Girl.mogg",
+			"03 The Cars - Just What I Needed.mogg",
+			"04 The Cars - I'm In Touch With Your World.mogg",
+			"05 The Cars - Don't Cha Stop.mogg",
+			"06 The Cars - You're All I've Got.mogg",
+			"07 The Cars - Bye Bye Love.mogg",
+			"08 The Cars - Moving In Stereo.mogg",
+			"09 The Cars - All Mixed Up.mogg"
+		]
+	},
+	{
+		"nom":"The Clash - Should I Stay Or Should I Go",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"extra.mp3",
+			"extra.png",
+			"guitare.mp3",
+			"guitare.png",
+			"guitare2.mp3",
+			"guitare2.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"The Donnas - Take It Off",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"The Pixies - Doolittle",
+		"composition":
+		[
+			"01 - Pixies - Debaser.mogg",
+			"02 Pixies - Tame.mogg",
+			"03 Pixies - Wave Of Mutilation.mogg",
+			"04 Pixies - I Bleed.mogg",
+			"05 Pixies - Here Comes Your Man.mogg",
+			"06 Pixies - Dead.mogg",
+			"07 Pixies - Monkey Gone To Heaven.mogg",
+			"08 Pixies - Mr. Grieves.mogg",
+			"09 Pixies - Crackity Jones.mogg",
+			"10 Pixies - La La Love You.mogg",
+			"11 Pixies - No. 13 Baby.mogg",
+			"12 Pixies - There Goes My Gun.mogg",
+			"13 Pixies - Hey.mogg",
+			"14 Pixies - Silver.mogg",
+			"15 Pixies - Gouge Away.mogg"
+		]
+	},
+	{
+		"nom":"The Police - Message in a Bottle",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"The Police - Roxanne",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"The Reverend Horton Heat - Psychobilly Freakout",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"The Rolling Stones - Honky Tonk Woman",
+		"composition":
+		[
+			"Bass 1.mp3",
+			"Bass 2.mp3",
+			"Drums 1 bass drum.mp3",
+			"Drums 2 bass drum.mp3",
+			"Drums 3 snare.mp3",
+			"Drums 4 snare.mp3",
+			"Drums 5 hi-hat cymbals.mp3",
+			"Drums 6 hi-hat cymbals.mp3",
+			"Drums 7 toms.mp3",
+			"Drums 8 toms.mp3",
+			"Guitar 1 solo.mp3",
+			"Guitar 2 rythm.mp3",
+			"Misc bell piano guitar overdubs.mp3",
+			"Misc horns guitar overdubs.mp3",
+			"Vocals 1 main.mp3",
+			"Vocals 2 main + harmony.mp3"
+		]
+	},
+	{
+		"nom":"The Rolling Stones - Paint It Black",
+		"composition":
+		[
+			"guitar.ogg",
+			"notes.mid",
+			"rhythm.ogg",
+			"song.ini",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"The Sex Pistols - Pretty Vacant",
+		"composition":
+		[
+			"Background vocals 1.mp3",
+			"Background vocals 2.mp3",
+			"Bass 1.mp3",
+			"Bass 2.mp3",
+			"Drums 1 Bass Drum.mp3",
+			"Drums 2 Bass drum.mp3",
+			"Drums 3 snare.mp3",
+			"Drums 4 snare.mp3",
+			"Drums 5 toms.mp3",
+			"Drums 6 toms.mp3",
+			"Drums 7 hi-hat cymbals.mp3",
+			"Drums 8 hi-hat cymbals.mp3",
+			"Guiar 2.mp3",
+			"Guitar 1.mp3",
+			"Guitar overdubs.mp3",
+			"Sex Pistols - Pretty Vacant 15.mp3",
+			"Vocals 1.mp3",
+			"Vocals 2.mp3"
+		]
+	},
+	{
+		"nom":"The Stooges - Search and Destroy",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"note.txt",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"The Sword - Freya",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"The Who - Behind Blue Eyes",
+		"composition":
+		[
+			"1 Guitar main.mp3",
+			"10 Vocals choirs.mp3",
+			"11 Misc noise + choirs.mp3",
+			"12 Misc noise + choirs.mp3",
+			"2 Guitar solo.mp3",
+			"3 drum.snare.mp3",
+			"4 drum toms.mp3",
+			"5 drums cymbals.mp3",
+			"6 Bass.mp3",
+			"7 Vocals.mp3",
+			"8 Vocals.mp3",
+			"9 Vocals choirs.mp3"
+		]
+	},
+	{
+		"nom":"The Who - I Won't Get Fooled Again",
+		"composition":
+		[
+			"1 Drums1.mp3",
+			"2 Drums2.mp3",
+			"3 Bass.mp3",
+			"4 Guitar1.mp3",
+			"5 Guitar 2.mp3",
+			"6 Lead Vocal.mp3",
+			"7 Lead Vocal 2.mp3",
+			"8 Background Inst..mp3",
+			"9 Keyboards.mp3"
+		]
+	},
+	{
+		"nom":"Trust - Antisocial",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png",
+			"voix2.mp3",
+			"voix2.png"
+		]
+	},
+	{
+		"nom":"Twisted Sister - I Wanna Rock",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Village People - YMCA",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"extra.mp3",
+			"extra.png",
+			"voix.mp3",
+			"voix.png"
+		]
+	},
+	{
+		"nom":"Warrant  - Cherry Pie",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Weezer - My Name Is Jonas",
+		"composition":
+		[
+			"guitar.ogg",
+			"notes.mid",
+			"rhythm.ogg",
+			"song.ini",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Weezer - Say It Aint So",
+		"composition":
+		[
+			"basse.mp3",
+			"basse.png",
+			"batterie.mp3",
+			"batterie.png",
+			"guitare.mp3",
+			"guitare.png",
+			"voix.mp3",
+			"voix.png",
+			"voix2.mp3",
+			"voix2.png"
+		]
+	},
+	{
+		"nom":"White Zombie - Thunder Kiss '65",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	},
+	{
+		"nom":"Wolfmother  - Woman",
+		"composition":
+		[
+			"bass.ogg",
+			"cymbals.ogg",
+			"guitar.ogg",
+			"kick.ogg",
+			"snaretoms.ogg",
+			"song.ogg"
+		]
+	}
+]

@@ -1,0 +1,15 @@
+body{
+    padding-top: 50px; 
+}
+
+.welcome{
+    color: white;
+}
+
+.alert{
+    text-align: center;
+}
+
+.menu-inscription a{
+    margin-top: 8px;
+}
