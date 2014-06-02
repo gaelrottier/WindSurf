@@ -16,6 +16,11 @@
                 Vos indentifiants sont erron&eacute;s.
             </div>
         </c:if>
+        <c:if test="${sessionScope['message'] == 'connecte'}">
+            <div class="alert alert-success">
+                Vous avez &eacute;t&eacute; connect&eacute;.
+            </div>
+        </c:if>
         <c:if test="${sessionScope['message'] == 'deco'}">
             <div class="alert alert-info">
                 Vous avez &eacute;t&eacute; d&eacute;connect&eacute;.

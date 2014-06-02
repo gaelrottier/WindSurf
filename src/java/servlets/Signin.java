@@ -76,6 +76,7 @@ public class Signin extends HttpServlet {
                         session.setAttribute("login", login);
                         //2 semaines (14 jours)
                         session.setMaxInactiveInterval(1209600);
+                        message="connecte";
                     } else {
                         message = "badIds";
                     }

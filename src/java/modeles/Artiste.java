@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package modeles;
 
 import java.io.Serializable;
@@ -21,6 +20,7 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Artiste implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,7 +30,17 @@ public class Artiste implements Serializable {
     private String photo;
     @OneToMany(mappedBy = "artiste")
     private Collection<Morceau> morceaux = new ArrayList<>();
-    
+
+    public Artiste() {
+
+    }
+
+    public Artiste(String nom, String resume, String photo) {
+        this.nom = nom;
+        this.resume = resume;
+        this.photo = photo;
+    }
+
     public int getId() {
         return id;
     }
@@ -75,5 +85,5 @@ public class Artiste implements Serializable {
     public String toString() {
         return "modeles.Artiste[ id=" + id + " ]";
     }
-    
+
 }
