@@ -12,13 +12,18 @@ public class GestionnaireArtistes {
     @PersistenceContext
     private EntityManager em;
 
-    public void creerArtiste(String nom, String resume, String photo) {
+    public Artiste creerArtiste(String nom, String resume, String photo) {
+        Artiste a;
 
-        if (!exists(nom)) {
-            Artiste a = new Artiste(nom, resume, photo);
+        if (exists(nom)) {
+            a = getArtiste(nom);
+        } else {
+            a = new Artiste(nom, resume, photo);
 
             em.persist(a);
         }
+
+        return a;
     }
 
     public Artiste getArtiste(String nom) {

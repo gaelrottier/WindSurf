@@ -24,15 +24,18 @@ public class GestionnaireUtilisateurs {
     public Utilisateur creerUtilisateur(String login, String password) {
         Utilisateur u = new Utilisateur(login, password);
         Abonnement a = gestionnaireAbonnements.getAboByName("Gratuit");
+        
         u.setAbo(a);
         Date dateSouscription = new Date();
+        
         u.setDateSouscription(dateSouscription.getTime());
+        
         em.persist(u);
         return u;
     }
 
     public boolean connect(String login, String password) {
-        Query q = em.createQuery("select u from Utilisateur u where (u.login) = :login and u.password = :password");
+        Query q = em.createQuery("select u from Utilisateur u where lower(u.login) = :login and u.password = :password");
         q.setParameter("login", login.toLowerCase());
         q.setParameter("password", utils.MD5Hash.encrypt(password));
 

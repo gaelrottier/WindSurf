@@ -7,13 +7,14 @@
     <body>
         <c:import url="/WEB-INF/menu.jsp"></c:import>
 
-        <c:if test="${sessionScope['message'] == 'existe'}">
+        <c:if test="${sessionScope.message == 'existe'}">
             <div class="alert alert-danger" style="text-align: center;">
                 D&eacute;sol&eacute;, ce nom d&apos;utilisateur est d&eacute;j&agrave; pris.
             </div>
             <c:remove var="message" scope="session"/>
         </c:if>
-        <c:if test="${empty sessionScope['login']}">
+        
+        <c:if test="${empty sessionScope.login}">
             <!-- G&eacute;n&eacute;r&eacute; via http://bootsnip.com/forms?version=3 !-->
             <form class="form-horizontal" action="ServletUsers" method="post">
                 <fieldset>
@@ -48,7 +49,7 @@
                 </fieldset>
             </form>
         </c:if>
-        <c:if test="${not empty sessionScope['login']}">
+        <c:if test="${not empty sessionScope.login}">
             <c:redirect url="index.jsp"></c:redirect>
         </c:if>
     </body>

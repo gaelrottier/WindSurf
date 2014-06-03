@@ -16,15 +16,21 @@ import javax.persistence.ManyToMany;
 @Entity
 public class Instrument implements Serializable {
 
-    @ManyToMany(mappedBy = "instruments")
-    private List<Morceau> morceaux;
-
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nom;
     private int difficulte;
+
+    public Instrument() {
+
+    }
+
+    public Instrument(String nom, int difficulte) {
+        this.nom = nom;
+        this.difficulte = difficulte;
+    }
 
     public String getNom() {
         return nom;
@@ -48,14 +54,6 @@ public class Instrument implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public List<Morceau> getMorceaux() {
-        return morceaux;
-    }
-
-    public void setMorceaux(List<Morceau> morceaux) {
-        this.morceaux = morceaux;
     }
 
     @Override

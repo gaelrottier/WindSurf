@@ -14,8 +14,16 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import gestionnaires.GestionnaireAbonnements;
 import gestionnaires.GestionnaireArtistes;
+import gestionnaires.GestionnaireGenres;
+import gestionnaires.GestionnaireInstruments;
 import gestionnaires.GestionnaireUtilisateurs;
 import gestionnaires.GestionnaireMorceaux;
+import gestionnaires.GestionnairePistes;
+import java.util.List;
+import modeles.Artiste;
+import modeles.Genre;
+import modeles.Instrument;
+import modeles.Morceau;
 
 @WebListener
 public class MyContextListener implements ServletContextListener {
@@ -31,11 +39,21 @@ public class MyContextListener implements ServletContextListener {
 
     @EJB
     private GestionnaireMorceaux gestionnaireMorceaux;
-    
+
+    @EJB
+    private GestionnaireInstruments gestionnaireInstruments;
+
+    @EJB
+    private GestionnairePistes gestionnairePistes;
+
+    @EJB
+    private GestionnaireGenres gestionnaireGenres;
+
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         gestionnaireAbonnements.creerAbonnements();
         gestionnaireUtilisateurs.creerUtilisateur("admin", "admin");
+        gestionnaireGenres.creerGenres();
 
         try {
             JSON Json = new JSON(sce.getServletContext());
@@ -48,33 +66,83 @@ public class MyContextListener implements ServletContextListener {
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-        sce.getServletContext().removeAttribute("login");
-        sce.getServletContext().removeAttribute("userAbo");
-        sce.getServletContext().removeAttribute("listeAbos");
     }
 
     private void fillDBFromJson(JSONArray Json) {
 
+        JSONObject morceau;
+        String morceauFullNom, morceauTitre, artiste, piste, instrument, genre;
+        Pattern p;
+        Matcher m;
+        List<String> composition;
+        Artiste a;
+        Instrument in;
+        Morceau mc;
+        Genre g;
+        int nbPistes;
+
         for (int i = 0; i < Json.size(); i++) {
 
-            JSONObject morceau = (JSONObject) Json.get(i);
-
-            String morceauFullNom = morceau.get("nom").toString();
+            morceau = (JSONObject) Json.get(i);
+            morceauFullNom = morceau.get("nom").toString();
 
             // Trouve la partie du String correspondant à "<String> - "
-            Pattern p = Pattern.compile("^.*( \\- )");
-            Matcher m = p.matcher(morceauFullNom);
+            p = Pattern.compile("^.*( \\- )");
+            m = p.matcher(morceauFullNom);
 
             if (m.find()) {
-                String artiste = m.group(0).replace(" - ", "");
-                gestionnaireArtistes.creerArtiste(artiste, "", "");
+                artiste = m.group(0).replace(" - ", "");
+                a = gestionnaireArtistes.creerArtiste(artiste, "", "");
 
-                String morceauTitre = morceauFullNom.substring(m.end());
-                gestionnaireMorceaux.creerMorceau(morceauTitre, 0, 2000, "");
+                morceauTitre = morceauFullNom.substring(m.end());
+                mc = gestionnaireMorceaux.creerMorceau(morceauTitre, 0, 2000, "");
+
+                genre = "";
+                int jsonSizeSurCinq = Json.size() / 5;
+                if (i < jsonSizeSurCinq) {
+                    genre = "Rock";
+                } else if (i < jsonSizeSurCinq * 2) {
+                    genre = "Rap";
+                } else if (i < jsonSizeSurCinq * 3) {
+                    genre = "Reggae";
+                } else if (i < jsonSizeSurCinq * 4) {
+                    genre = "Blues";
+                } else {
+                    genre = "Variété";
+                }
+                g = gestionnaireGenres.getGenre(genre);
+
+                gestionnaireMorceaux.setGenre(mc, g);
                 
-                gestionnaireMorceaux.setArtiste(gestionnaireMorceaux.getMorceau(morceauTitre), gestionnaireArtistes.getArtiste(artiste));
-            }
+                gestionnaireMorceaux.setArtiste(mc, a);
 
+                // Trouve la partie du String correspondant à "<String><espace OU point OU un chiffre>"
+                p = Pattern.compile(".*?(\\s|\\.|[0-9])");
+                composition = (List<String>) morceau.get("composition");
+
+                nbPistes = 0;
+
+                for (String compo : composition) {
+                    m = p.matcher(compo);
+                    nbPistes++;
+
+                    if (m.find()) {
+                        instrument = m.group(0).toString();
+                        instrument = instrument.substring(0, instrument.length() - 1);
+
+                        in = gestionnaireInstruments.setInstrument(instrument, 3);
+                        gestionnaireMorceaux.addInstrument(mc, in);
+
+                        piste = compo.substring(instrument.length() + 1);
+                        if (Character.isDigit(piste.charAt(0))) {
+                            piste = piste.substring(2);
+                        }
+                        gestionnairePistes.setPiste(piste, a, in);
+                    }
+                }
+
+                gestionnaireMorceaux.setNbPistes(mc, nbPistes);
+            }
         }
     }
 }

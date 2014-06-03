@@ -1,48 +1,47 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modeles;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 
-/**
- *
- * @author Goys
- */
 @Entity
-public class Genre implements Serializable {
+public class Piste implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String nom;
-    @ManyToMany
-    private Collection<Morceau> morceaux = new ArrayList<>();
+    @OneToOne
+    private Artiste artiste;
+    @OneToOne
+    private Instrument instrument;
 
-    public Genre(){
-        
+    public Artiste getArtiste() {
+        return artiste;
     }
-    
-    public Genre(String nom){
+
+    public void setArtiste(Artiste artiste) {
+        this.artiste = artiste;
+    }
+
+    public Instrument getInstrument() {
+        return instrument;
+    }
+
+    public void setInstrument(Instrument instrument) {
+        this.instrument = instrument;
+    }
+    private String nom;
+
+    public Piste(String nom) {
         this.nom = nom;
     }
-    
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
+    public Piste() {
+
     }
 
     public String getNom() {
@@ -53,12 +52,12 @@ public class Genre implements Serializable {
         this.nom = nom;
     }
 
-    public Collection<Morceau> getMorceaux() {
-        return morceaux;
+    public int getId() {
+        return id;
     }
 
-    public void setMorceaux(Collection<Morceau> morceaux) {
-        this.morceaux = morceaux;
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
@@ -71,10 +70,10 @@ public class Genre implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Genre)) {
+        if (!(object instanceof Piste)) {
             return false;
         }
-        Genre other = (Genre) object;
+        Piste other = (Piste) object;
         if (this.id != other.id) {
             return false;
         }
@@ -83,7 +82,7 @@ public class Genre implements Serializable {
 
     @Override
     public String toString() {
-        return "modeles.Genre[ id=" + id + " ]";
+        return "modeles.Piste[ id=" + id + " ]";
     }
 
 }

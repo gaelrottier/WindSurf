@@ -9,26 +9,25 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
 public class Morceau implements Serializable {
 
-    @ManyToMany(mappedBy = "morceaux")
-    private List<Genre> genres;
+    @OneToOne
+    private Genre genre;
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String titre;
     private int nbPistes;
-    @ManyToMany
+    @OneToMany
     private Collection<Instrument> instruments = new ArrayList<>();
     @OneToOne
     private Artiste artiste;
@@ -44,6 +43,14 @@ public class Morceau implements Serializable {
         this.nbPistes = nbPistes;
         this.annee = annee;
         this.url = url;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
     }
 
     public String getTitre() {
@@ -76,14 +83,6 @@ public class Morceau implements Serializable {
 
     public void setArtiste(Artiste artiste) {
         this.artiste = artiste;
-    }
-
-    public List<Genre> getGenres() {
-        return genres;
-    }
-
-    public void setGenres(List<Genre> genres) {
-        this.genres = genres;
     }
 
     public int getAnnee() {

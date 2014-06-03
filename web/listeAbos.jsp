@@ -7,12 +7,12 @@
         <c:param name="page" value="Choix d&apos;un abonnement"></c:param>
     </c:import>
     <body>
-        <c:if test="${sessionScope['message'] == 'erreur'}">
+        <c:if test="${sessionScope.message == 'erreur'}">
             <div class="alert alert-danger">
                 Une erreur est survenue.
             </div>
         </c:if>
-        <c:if test="${sessionScope['message'] == 'aboUpdated'}">
+        <c:if test="${sessionScope.message == 'aboUpdated'}">
             <div class="alert alert-success">
                 Votre abonnement a &eacute;t&eacute; mis &agrave; jour.
             </div>
@@ -20,10 +20,10 @@
         <c:remove var="message" scope="session"/>
 
         <c:import url="/WEB-INF/menu.jsp"></c:import>
-        <c:if test="${empty sessionScope['listeAbos']}">
+        <c:if test="${empty sessionScope.listeAbos}">
             <c:redirect url="ServletAbos"></c:redirect>
         </c:if>
-        <c:if test="${not empty sessionScope['userAbo']}">
+        <c:if test="${not empty sessionScope.userAbo}">
             <div class="row">
                 <div class="col-lg-2 col-lg-offset-1"><br>
                     <p>
@@ -37,10 +37,10 @@
 
     <div class="row">
         <p>
-            <c:if test="${not empty sessionScope['login']}">
+            <c:if test="${not empty sessionScope.login}">
                 <h3 class="col-lg-3 col-lg-offset-1">Choisissez un abonnement : </h3>
             </c:if>
-            <c:if test="${empty sessionScope['login']}">
+            <c:if test="${empty sessionScope.login}">
                 <h3 class="col-lg-3 col-lg-offset-1">Liste des abonnements : </h3>
             </c:if>
         </p>
@@ -48,7 +48,7 @@
         
     <div class="row">
         <div class="col-lg-1"></div>
-        <c:forEach var="a" items="${sessionScope['listeAbos']}">
+        <c:forEach var="a" items="${sessionScope.listeAbos}">
             <form action="ServletAbos" method="post">
                 <button class="col-lg-2">
                     <h1>${a.nom}</h1>

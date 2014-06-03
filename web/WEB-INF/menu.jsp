@@ -7,8 +7,8 @@
         </div>
         <div class="navbar-collapse collapse">
             <div class="row">
-                <c:if test="${not empty sessionScope['login']}">
-                    <h4 class="col-lg-2 col-lg-offset-5 welcome">Bonjour ${sessionScope['login']}.</h4>
+                <c:if test="${not empty sessionScope.login}">
+                    <h4 class="col-lg-2 col-lg-offset-5 welcome">Bonjour ${sessionScope.login}.</h4>
                     <span class="menu-inscription">
                         <a class="col-lg-2 btn btn-default" href="ServletAbos" >Changer d&apos;abonnement</a>
                     </span>
@@ -19,7 +19,7 @@
                         </span>
                     </form>
                 </c:if>
-                <c:if test="${empty sessionScope['login']}">
+                <c:if test="${empty sessionScope.login}">
                     <div class="pull-right">
                         <c:import url="/WEB-INF/signin.jsp"></c:import>
                             <span class="menu-inscription">

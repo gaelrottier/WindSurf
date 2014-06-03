@@ -6,22 +6,22 @@
         <c:param name="page" value="Accueil" />
     </c:import>    
     <body>
-        <c:if test="${sessionScope['message'] == 'inscrit'}">
+        <c:if test="${sessionScope.message == 'inscrit'}">
             <div class="alert alert-success">
                 Votre inscription a &eacute;t&eacute; valid&eacute;e.
             </div>
         </c:if>
-        <c:if test="${sessionScope['message'] == 'badIds'}">
+        <c:if test="${sessionScope.message == 'badIds'}">
             <div class="alert alert-danger">
                 Vos indentifiants sont erron&eacute;s.
             </div>
         </c:if>
-        <c:if test="${sessionScope['message'] == 'connecte'}">
+        <c:if test="${sessionScope.message == 'connecte'}">
             <div class="alert alert-success">
-                Vous avez &eacute;t&eacute; connect&eacute;.
+                Vous &ecirc;tes  connect&eacute;.
             </div>
         </c:if>
-        <c:if test="${sessionScope['message'] == 'deco'}">
+        <c:if test="${sessionScope.message == 'deco'}">
             <div class="alert alert-info">
                 Vous avez &eacute;t&eacute; d&eacute;connect&eacute;.
             </div>
