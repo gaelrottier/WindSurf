@@ -34,7 +34,7 @@ public class GestionnaireUtilisateurs {
     public boolean connect(String login, String password) {
         Query q = em.createQuery("select u from Utilisateur u where (u.login) = :login and u.password = :password");
         q.setParameter("login", login.toLowerCase());
-        q.setParameter("password", Utils.MD5Hash.encrypt(password));
+        q.setParameter("password", utils.MD5Hash.encrypt(password));
 
         return q.getResultList().size() > 0;
     }

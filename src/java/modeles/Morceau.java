@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -33,6 +34,17 @@ public class Morceau implements Serializable {
     private Artiste artiste;
     private int annee;
     private String url;
+
+    public Morceau() {
+
+    }
+
+    public Morceau(String titre, int nbPistes, int annee, String url) {
+        this.titre = titre;
+        this.nbPistes = nbPistes;
+        this.annee = annee;
+        this.url = url;
+    }
 
     public String getTitre() {
         return titre;

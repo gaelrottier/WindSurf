@@ -21,9 +21,11 @@ public class GestionnaireAbonnements {
         creerAbonnement(200.0, "A vie", 0);
     }
 
-    public void creerAbonnement(double prix, String nom, int duree) {
+    public Abonnement creerAbonnement(double prix, String nom, int duree) {
         Abonnement a = new Abonnement(prix, nom, duree);
         em.persist(a);
+        
+        return a;
     }
 
     public Abonnement getAboByName(String nom) {

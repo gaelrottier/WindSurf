@@ -12,7 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import Utils.MD5Hash;
+import utils.MD5Hash;
 
 @Entity
 public class Utilisateur implements Serializable {
