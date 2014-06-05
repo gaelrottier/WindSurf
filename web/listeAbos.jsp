@@ -53,7 +53,7 @@
                 <div class="col-lg-1"></div>
                 <c:forEach var="a" items="${sessionScope.listeAbos}">
                     <form action="ServletAbos" method="post">
-                        <button class="col-lg-2">
+                        <button class="btn-lg btn-default col-lg-2">
                             <h1>${a.nom}</h1>
                             <h1>${a.prix}<span class="glyphicon glyphicon-euro"></span></h1>
                         </button>
