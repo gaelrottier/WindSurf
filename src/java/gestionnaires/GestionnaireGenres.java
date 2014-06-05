@@ -37,10 +37,13 @@ public class GestionnaireGenres {
 
     public void addMorceau(Genre g, Morceau m) {
         Collection<Morceau> cm = g.getMorceaux();
-        cm.add(m);
-        g.setMorceaux(cm);
 
-        em.merge(g);
+        if (!cm.contains(m)) {
+            cm.add(m);
+            g.setMorceaux(cm);
+
+            em.merge(g);
+        }
     }
 
     public Collection<Genre> searchGenre(String search) {
@@ -48,6 +51,10 @@ public class GestionnaireGenres {
         q.setParameter("nom", "%" + search.toLowerCase() + "%");
 
         return (Collection<Genre>) q.getResultList();
+    }
+
+    public Genre getGenreById(int id) {
+        return em.find(Genre.class, id);
     }
 
     public Genre getGenre(String nom) {

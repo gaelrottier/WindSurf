@@ -32,7 +32,7 @@ function searchResultSelected() {
 
     var id = $(rechercheResults).val();
 
-    window.location.replace("ServletResultatRecherche?t=" + label + "&q=" + id);
+    window.location.href = "ServletResultatRecherche?t=" + label + "&q=" + id;
 }
 
 $(document).ready(function() {

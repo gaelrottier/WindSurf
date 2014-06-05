@@ -36,12 +36,18 @@ public class GestionnaireArtistes {
 
     }
 
+    public Artiste getArtisteById(int id) {
+        return em.find(Artiste.class, id);
+    }
+
     public void addMorceau(Artiste a, Morceau m) {
         Collection<Morceau> cm = a.getMorceaux();
-        cm.add(m);
-        a.setMorceaux(cm);
+        if (!cm.contains(m)) {
+            cm.add(m);
+            a.setMorceaux(cm);
 
-        em.merge(a);
+            em.merge(a);
+        }
     }
 
     public Collection<Artiste> searchArtiste(String search) {

@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import modeles.Instrument;
+import modeles.Morceau;
 
 @Stateless
 public class GestionnaireInstruments {
@@ -26,6 +27,22 @@ public class GestionnaireInstruments {
         return i;
     }
 
+    public void addMorceau(Instrument i, Morceau m) {
+        Collection<Morceau> mc = i.getMorceaux();
+
+        if (!mc.contains(m)) {
+            mc.add(m);
+
+            i.setMorceaux(mc);
+
+            em.merge(i);
+        }
+    }
+
+    public Collection<Morceau> getMorceaux(Instrument i) {
+        return i.getMorceaux();
+    }
+
     public Collection<Instrument> searchInstrument(String search) {
         Query q = em.createQuery("select i from Instrument i where lower(i.nom) LIKE :nom");
         q.setParameter("nom", "%" + search.toLowerCase() + "%");
@@ -39,6 +56,10 @@ public class GestionnaireInstruments {
 
         return (Instrument) q.getSingleResult();
 
+    }
+
+    public Instrument getInstrumentById(int id) {
+        return em.find(Instrument.class, id);
     }
 
     private boolean exists(String nom) {

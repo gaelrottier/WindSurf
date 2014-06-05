@@ -6,12 +6,13 @@
 package modeles;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Instrument implements Serializable {
@@ -22,6 +23,8 @@ public class Instrument implements Serializable {
     private int id;
     private String nom;
     private int difficulte;
+    @OneToMany
+    private Collection<Morceau> morceaux = new ArrayList<>();
 
     public Instrument() {
 
@@ -30,6 +33,14 @@ public class Instrument implements Serializable {
     public Instrument(String nom, int difficulte) {
         this.nom = nom;
         this.difficulte = difficulte;
+    }
+
+    public Collection<Morceau> getMorceaux() {
+        return morceaux;
+    }
+
+    public void setMorceaux(Collection<Morceau> morceaux) {
+        this.morceaux = morceaux;
     }
 
     public String getNom() {

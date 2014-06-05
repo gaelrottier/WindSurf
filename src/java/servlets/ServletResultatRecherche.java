@@ -5,13 +5,26 @@
  */
 package servlets;
 
+import gestionnaires.GestionnaireArtistes;
+import gestionnaires.GestionnaireGenres;
+import gestionnaires.GestionnaireInstruments;
+import gestionnaires.GestionnaireMorceaux;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import modeles.Artiste;
+import modeles.Genre;
+import modeles.Instrument;
+import modeles.Morceau;
 
 /**
  *
@@ -19,6 +32,18 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "ServletResultatRecherche", urlPatterns = {"/ServletResultatRecherche"})
 public class ServletResultatRecherche extends HttpServlet {
+
+    @EJB
+    private GestionnaireArtistes gestionnaireArtistes;
+    @EJB
+
+    private GestionnaireInstruments gestionnaireInstruments;
+    @EJB
+
+    private GestionnaireGenres gestionnaireGenres;
+    @EJB
+
+    private GestionnaireMorceaux gestionnaireMorceaux;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,13 +56,51 @@ public class ServletResultatRecherche extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String type = request.getParameter("t");
-        String rch = request.getParameter("q");
+        String t = request.getParameter("t");
+        String q = request.getParameter("q");
         String forwardTo = "index.jsp";
+        HttpSession session = request.getSession();
 
-        if (type != null) {
-            
+        if (t != null && q != null) {
+            int rch = Integer.parseInt(q);
+
+            switch (t) {
+                case "Artistes":
+                    Artiste a = gestionnaireArtistes.getArtisteById(rch);
+                    forwardTo = "artiste.jsp";
+                    session.setAttribute("res", a);
+                    // Je ne sais pas pourquoi, mais si je ne fais pas de foreach sur la collection, elle n'est pas instanciée
+                    for (Morceau mc : a.getMorceaux()) {
+                    }
+                    break;
+                case "Morceaux":
+                    Morceau m = gestionnaireMorceaux.getMorceauById(rch);
+                    forwardTo = "morceau.jsp";
+                    session.setAttribute("res", m);
+                    for (Instrument in : m.getInstruments()) {
+                    }
+                    break;
+                case "Instruments":
+                    Instrument i = gestionnaireInstruments.getInstrumentById(rch);
+                    forwardTo = "listeResultats.jsp";
+                    session.setAttribute("res", i);
+                    for (Morceau mc : i.getMorceaux()) {
+                    }
+                    break;
+                case "Genres":
+                    Genre g = gestionnaireGenres.getGenreById(rch);
+                    forwardTo = "listeResultats.jsp";
+                    session.setAttribute("res", g);
+                    for (Morceau mc : g.getMorceaux()) {
+                    }
+                    break;
+                default:
+                    break;
+            }
+
         }
+
+        response.sendRedirect(forwardTo);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

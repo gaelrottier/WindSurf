@@ -13,7 +13,7 @@
         </c:if>
         <c:if test="${sessionScope.message == 'badIds'}">
             <div class="alert alert-danger">
-                Vos indentifiants sont erron&eacute;s.
+                Vos identifiants sont erron&eacute;s.
             </div>
         </c:if>
         <c:if test="${sessionScope.message == 'connecte'}">

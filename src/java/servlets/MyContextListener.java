@@ -113,8 +113,10 @@ public class MyContextListener implements ServletContextListener {
                 g = gestionnaireGenres.getGenre(genre);
 
                 gestionnaireMorceaux.setGenre(mc, g);
-                
+                gestionnaireGenres.addMorceau(g, mc);
+
                 gestionnaireMorceaux.setArtiste(mc, a);
+                gestionnaireArtistes.addMorceau(a, mc);
 
                 // Trouve la partie du String correspondant à "<String><espace OU point OU un chiffre>"
                 p = Pattern.compile(".*?(\\s|\\.|[0-9])");
@@ -132,6 +134,7 @@ public class MyContextListener implements ServletContextListener {
 
                         in = gestionnaireInstruments.setInstrument(instrument, 3);
                         gestionnaireMorceaux.addInstrument(mc, in);
+                        gestionnaireInstruments.addMorceau(in, mc);
 
                         piste = compo.substring(instrument.length() + 1);
                         if (Character.isDigit(piste.charAt(0))) {

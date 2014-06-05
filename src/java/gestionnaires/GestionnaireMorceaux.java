@@ -73,6 +73,10 @@ public class GestionnaireMorceaux {
         gestionnaireGenres.addMorceau(g, m);
     }
 
+    public Morceau getMorceauById(int id) {
+        return em.find(Morceau.class, id);
+    }
+
     public Morceau getMorceau(String titre) {
         Query q = em.createQuery("select m from Morceau m where lower(m.titre) = :titre");
         q.setParameter("titre", titre.toLowerCase());
