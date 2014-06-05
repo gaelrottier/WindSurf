@@ -42,22 +42,6 @@ public class GestionnaireArtistes {
         return em.find(Artiste.class, id);
     }
 
-    public Artiste getArtisteByIdPaginated(int id, int page) {
-        Artiste a = em.find(Artiste.class, id);
-        int fromIndex = page * 10 - 10;
-        int toIndex = page * 10;
-
-        if (page * 10 > a.getMorceaux().size()) {
-            toIndex = page * 10 - a.getMorceaux().size();
-        }
-
-        Collection<Morceau> morceaux = ((List) a.getMorceaux()).subList(fromIndex, toIndex);
-
-        a.setMorceaux(morceaux);
-
-        return a;
-    }
-
     public void addMorceau(Artiste a, Morceau m) {
         Collection<Morceau> cm = a.getMorceaux();
         if (!cm.contains(m)) {

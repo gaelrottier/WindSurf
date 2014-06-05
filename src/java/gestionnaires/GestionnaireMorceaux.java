@@ -94,32 +94,54 @@ public class GestionnaireMorceaux {
         return em.find(Morceau.class, id);
     }
 
-    public Morceau getMorceauByIdPaginated(int id, int page) {
-        Morceau m = em.find(Morceau.class, id);
-        
-        
-        Collection<Piste> pistes = m.getPistes();
-        
-        int fromIndex = page * 10 - 10;
-        int toIndex = page * 10;
+    public Collection<Morceau> getMorceauxByArtistePaginated(Artiste a, int page) {
+        Query q = em.createQuery("select m from Morceau m where m.artiste = :a");
+        q.setParameter("a", a);
 
-        if (page * 10 > pistes.size()) {
-            toIndex = page * 10 - pistes.size();
-        }
-        System.out.println("Pistes.size()" + pistes.size());
-        try {
-            pistes = ((List) pistes).subList(fromIndex, toIndex);
+        int start = page * 10 - 10;
 
-            m.setPistes(pistes);
-        } catch (Exception e) {
-            System.out.println("toIndex : " + toIndex);
-            System.out.println("fromIndex : " + fromIndex);
-            System.out.println("Exception : " + e.getMessage());
-        }
+        q.setMaxResults(10);
+        q.setFirstResult(start);
 
-        return m;
+        return q.getResultList();
     }
-    
+
+    public Collection<Piste> getPistesByMorceauPaginated(Morceau m, int page) {
+        Query q = em.createQuery("select m.pistes from Morceau m where m = :m");
+        q.setParameter("m", m);
+
+        int start = page * 10 - 10;
+
+        q.setMaxResults(10);
+        q.setFirstResult(start);
+
+        return q.getResultList();
+    }
+
+    public Collection<Morceau> getMorceauxByGenrePaginated(Genre g, int page) {
+        Query q = em.createQuery("select m from Morceau m where m.genre = :g");
+        q.setParameter("g", g);
+
+        int start = page * 10 - 10;
+
+        q.setMaxResults(10);
+        q.setFirstResult(start);
+
+        return q.getResultList();
+    }
+
+    public Collection<Morceau> getMorceauxByInstrumentsPaginated(Instrument i, int page) {
+        Query q = em.createQuery("select DISTINCT(m) from Morceau m join m.pistes pistes join pistes.instrument instrument where instrument = :i");
+        q.setParameter("i", i);
+
+        int start = page * 10 - 10;
+
+        q.setMaxResults(10);
+        q.setFirstResult(start);
+
+        return q.getResultList();
+    }
+
     public Morceau getMorceau(String titre) {
         Query q = em.createQuery("select m from Morceau m where lower(m.titre) = :titre");
         q.setParameter("titre", titre.toLowerCase());

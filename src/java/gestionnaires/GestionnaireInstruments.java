@@ -63,22 +63,6 @@ public class GestionnaireInstruments {
         return em.find(Instrument.class, id);
     }
 
-    public Instrument getInstrumentByIdPaginated(int id, int page) {
-        Instrument i = em.find(Instrument.class, id);
-        int fromIndex = page * 10 - 10;
-        int toIndex = page * 10;
-
-        if (page * 10 > i.getMorceaux().size()) {
-            toIndex = page * 10 - i.getMorceaux().size();
-        }
-
-        Collection<Morceau> morceaux = ((List) i.getMorceaux()).subList(fromIndex, toIndex);
-
-        i.setMorceaux(morceaux);
-
-        return i;
-    }
-
     private boolean exists(String nom) {
         Query q = em.createQuery("select i from Instrument i where lower(i.nom) = :nom");
         q.setParameter("nom", nom.toLowerCase());

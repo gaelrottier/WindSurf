@@ -32,7 +32,7 @@
             </c:if>
             </thead>
             <tbody>
-                <c:forEach var="morceau" items="${sessionScope.res.morceaux}">
+                <c:forEach var="morceau" items="${sessionScope.morceaux}">
                     <tr>
                         <td><a href="ServletResultatRecherche?t=Morceaux&q=${morceau.id}">${morceau.titre}</a></td>
                         <td><a href="ServletResultatRecherche?t=Artistes&q=${morceau.artiste.id}">${morceau.artiste.nom}</a></td>
@@ -54,20 +54,45 @@
                 </c:forEach>
             </tbody>
         </table>
+        <c:set var="previous" value=""></c:set>
+        <c:set var="next" value=""></c:set>
 
-        <%--<c:set var="previous" value=""></c:set>--%>
-        <%--<c:set var="next" value=""></c:set>--%>
-
-        <%--<c:if test="${empty sessionScope.page || sessionScope.page == 1}">--%>
-        <%--<c:set var="previous" value="disabled"></c:set>--%>
-        <%--</c:if>--%>
-        <%--<c:if test="${sessionScope.res.morceaux.size() < 10}">--%>
-        <%--<c:set var="next" value="disabled"></c:set>--%>
-        <%--</c:if>--%>
-        <!--        <ul class="pager">
-                    <li class="previous ${previous}"><a href="ServletResultatRecherche?t=Instruments&q=${sessionScope.res.id}&page=${sessionScope.page - 1}">&larr; Page pr&eacute;c&eacute;dente</a></li>
-                    <li class="next ${next}"><a href="ServletResultatRecherche?t=Instruments&q=${sessionScope.res.id}&page=${sessionScope.page + 1}">Page suivante &rarr;</a></li>
-                </ul>-->
+        <c:if test="${empty sessionScope.page || sessionScope.page == 1}">
+            <c:set var="previous" value="disabled"></c:set>
+        </c:if>
+        <c:if test="${sessionScope.morceaux.size() < 10}">
+            <c:set var="next" value="disabled"></c:set>
+        </c:if>
+        <ul class="pager">
+            <c:if test="${previous == 'disabled'}">
+                <li class="previous disabled">
+                    <a href="#">
+                        Page pr&eacute;c&eacute;dente
+                    </a>
+                </li>
+            </c:if>
+            <c:if test="${empty previous}">
+                <li class="previous">
+                    <a href="ServletResultatRecherche?t=Instruments&q=${sessionScope.res.id}&page=${sessionScope.page - 1}">
+                        &larr; Page pr&eacute;c&eacute;dente
+                    </a>
+                </li>
+            </c:if>
+            <c:if test="${next == 'disabled'}">
+                <li class="next disabled">
+                    <a href="#">
+                        Page suivante
+                    </a>
+                </li>
+            </c:if>
+            <c:if test="${empty next}">
+                <li class="next">
+                    <a href="ServletResultatRecherche?t=Instruments&q=${sessionScope.res.id}&page=${sessionScope.page + 1}">
+                        Page suivante &rarr;
+                    </a>
+                </li>
+            </c:if>
+        </ul>
 
     </div>
 </div>

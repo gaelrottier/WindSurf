@@ -24,6 +24,7 @@ import modeles.Artiste;
 import modeles.Genre;
 import modeles.Instrument;
 import modeles.Morceau;
+import modeles.Piste;
 import modeles.Utilisateur;
 
 /**
@@ -78,51 +79,55 @@ public class ServletResultatRecherche extends HttpServlet {
                 u = gestionnaireUtilisateurs.getUser((String) session.getAttribute("login"));
             }
             Collection<Morceau> achats = new ArrayList<>();
+            Collection<Morceau> morceaux = new ArrayList<>();
 
             switch (t) {
                 case "Artistes":
-                    //La pagination ne fonctionne pas
-//                    Artiste a = gestionnaireArtistes.getArtisteByIdPaginated(rch, p);
                     Artiste a = gestionnaireArtistes.getArtisteById(rch);
+                    morceaux = gestionnaireMorceaux.getMorceauxByArtistePaginated(a, p);
                     if (login != null) {
                         achats = gestionnaireUtilisateurs.getAchatsByArtiste(u, a);
                         session.setAttribute("achats", achats);
                     }
                     forwardTo = "artiste.jsp";
+                    session.setAttribute("morceaux", morceaux);
                     session.setAttribute("res", a);
                     // Je ne sais pas pourquoi, mais si je ne fais pas de foreach sur la collection, elle n'est pas instanciée
                     for (Morceau mc : a.getMorceaux()) {
                     }
                     break;
                 case "Morceaux":
-//                    Morceau m = gestionnaireMorceaux.getMorceauByIdPaginated(rch, p);
                     Morceau m = gestionnaireMorceaux.getMorceauById(rch);
+                    Collection<Piste> pistes = gestionnaireMorceaux.getPistesByMorceauPaginated(m, p);
                     forwardTo = "morceau.jsp";
+                    session.setAttribute("pistes", pistes);
                     session.setAttribute("res", m);
                     for (Instrument in : m.getInstruments()) {
                     }
                     break;
                 case "Instruments":
-//                    Instrument i = gestionnaireInstruments.getInstrumentByIdPaginated(rch, p);
                     Instrument i = gestionnaireInstruments.getInstrumentById(rch);
+                    morceaux = gestionnaireMorceaux.getMorceauxByInstrumentsPaginated(i, p);
                     if (login != null) {
                         achats = gestionnaireUtilisateurs.getAchatsByInstrument(u, i);
                         session.setAttribute("achats", achats);
 
                     }
                     forwardTo = "listeResultats.jsp";
+                    session.setAttribute("morceaux", morceaux);
                     session.setAttribute("res", i);
                     for (Morceau mc : i.getMorceaux()) {
                     }
                     break;
                 case "Genres":
-//                    Genre g = gestionnaireGenres.getGenreByIdPaginated(rch, p);
                     Genre g = gestionnaireGenres.getGenreById(rch);
+                    morceaux = gestionnaireMorceaux.getMorceauxByGenrePaginated(g, p);
                     if (login != null) {
                         achats = gestionnaireUtilisateurs.getAchatsByGenre(u, g);
                         session.setAttribute("achats", achats);
                     }
                     forwardTo = "listeResultats.jsp";
+                    session.setAttribute("morceaux", morceaux);
                     session.setAttribute("res", g);
                     for (Morceau mc : g.getMorceaux()) {
                     }
@@ -130,7 +135,7 @@ public class ServletResultatRecherche extends HttpServlet {
                 default:
                     break;
             }
-//            session.setAttribute("page", p);
+            session.setAttribute("page", p);
         }
 
         response.sendRedirect(forwardTo);

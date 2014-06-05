@@ -58,22 +58,6 @@ public class GestionnaireGenres {
         return em.find(Genre.class, id);
     }
 
-    public Genre getGenreByIdPaginated(int id, int page) {
-        Genre g = em.find(Genre.class, id);
-        int fromIndex = page * 10 - 10;
-        int toIndex = page * 10;
-
-        if (page * 10 > g.getMorceaux().size()) {
-            toIndex = page * 10 - g.getMorceaux().size();
-        }
-
-        Collection<Morceau> morceaux = ((List) g.getMorceaux()).subList(fromIndex, toIndex);
-
-        g.setMorceaux(morceaux);
-
-        return g;
-    }
-
     public Genre getGenre(String nom) {
         Query q = em.createQuery("select g from Genre g where lower(g.nom) = :nom");
         q.setParameter("nom", nom.toLowerCase());
