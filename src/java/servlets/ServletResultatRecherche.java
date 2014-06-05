@@ -9,7 +9,10 @@ import gestionnaires.GestionnaireArtistes;
 import gestionnaires.GestionnaireGenres;
 import gestionnaires.GestionnaireInstruments;
 import gestionnaires.GestionnaireMorceaux;
+import gestionnaires.GestionnaireUtilisateurs;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,6 +24,7 @@ import modeles.Artiste;
 import modeles.Genre;
 import modeles.Instrument;
 import modeles.Morceau;
+import modeles.Utilisateur;
 
 /**
  *
@@ -40,6 +44,9 @@ public class ServletResultatRecherche extends HttpServlet {
 
     @EJB
     private GestionnaireMorceaux gestionnaireMorceaux;
+
+    @EJB
+    private GestionnaireUtilisateurs gestionnaireUtilisateurs;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -63,15 +70,24 @@ public class ServletResultatRecherche extends HttpServlet {
             p = Integer.parseInt(page);
         }
 
-        System.out.println("Page  : "+p);
         if (t != null && q != null) {
             int rch = Integer.parseInt(q);
+            String login = (String) session.getAttribute("login");
+            Utilisateur u = null;
+            if (login != null) {
+                u = gestionnaireUtilisateurs.getUser((String) session.getAttribute("login"));
+            }
+            Collection<Morceau> achats = new ArrayList<>();
 
             switch (t) {
                 case "Artistes":
                     //La pagination ne fonctionne pas
 //                    Artiste a = gestionnaireArtistes.getArtisteByIdPaginated(rch, p);
                     Artiste a = gestionnaireArtistes.getArtisteById(rch);
+                    if (login != null) {
+                        achats = gestionnaireUtilisateurs.getAchatsByArtiste(u, a);
+                        session.setAttribute("achats", achats);
+                    }
                     forwardTo = "artiste.jsp";
                     session.setAttribute("res", a);
                     // Je ne sais pas pourquoi, mais si je ne fais pas de foreach sur la collection, elle n'est pas instanciée
@@ -89,6 +105,11 @@ public class ServletResultatRecherche extends HttpServlet {
                 case "Instruments":
 //                    Instrument i = gestionnaireInstruments.getInstrumentByIdPaginated(rch, p);
                     Instrument i = gestionnaireInstruments.getInstrumentById(rch);
+                    if (login != null) {
+                        achats = gestionnaireUtilisateurs.getAchatsByInstrument(u, i);
+                        session.setAttribute("achats", achats);
+
+                    }
                     forwardTo = "listeResultats.jsp";
                     session.setAttribute("res", i);
                     for (Morceau mc : i.getMorceaux()) {
@@ -97,6 +118,10 @@ public class ServletResultatRecherche extends HttpServlet {
                 case "Genres":
 //                    Genre g = gestionnaireGenres.getGenreByIdPaginated(rch, p);
                     Genre g = gestionnaireGenres.getGenreById(rch);
+                    if (login != null) {
+                        achats = gestionnaireUtilisateurs.getAchatsByGenre(u, g);
+                        session.setAttribute("achats", achats);
+                    }
                     forwardTo = "listeResultats.jsp";
                     session.setAttribute("res", g);
                     for (Morceau mc : g.getMorceaux()) {
@@ -105,7 +130,7 @@ public class ServletResultatRecherche extends HttpServlet {
                 default:
                     break;
             }
-            session.setAttribute("page", p);
+//            session.setAttribute("page", p);
         }
 
         response.sendRedirect(forwardTo);

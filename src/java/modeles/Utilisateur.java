@@ -7,10 +7,13 @@ package modeles;
 
 import java.io.Serializable;
 import java.security.MessageDigest;
+import java.util.ArrayList;
+import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import utils.MD5Hash;
 
@@ -26,6 +29,8 @@ public class Utilisateur implements Serializable {
     @OneToOne
     private Abonnement abo;
     private Long dateSouscription;
+    @OneToMany
+    private Collection<Morceau> achats = new ArrayList<>();
 
     public Utilisateur() {
     }
@@ -33,6 +38,14 @@ public class Utilisateur implements Serializable {
     public Utilisateur(final String login, final String password) {
         this.login = login;
         this.password = encrypt(password);
+    }
+    
+    public Collection<Morceau> getAchats() {
+        return achats;
+    }
+
+    public void setAchats(Collection<Morceau> achats) {
+        this.achats = achats;
     }
 
     public Long getDateSouscription() {
@@ -59,10 +72,10 @@ public class Utilisateur implements Serializable {
         this.password = encrypt(password);
     }
 
-    private String encrypt(String str){
+    private String encrypt(String str) {
         return MD5Hash.encrypt(str);
     }
-    
+
     public String getLogin() {
         return login;
     }

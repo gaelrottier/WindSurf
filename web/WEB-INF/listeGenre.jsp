@@ -22,6 +22,9 @@
             <td>Ann&eacute;e</td>
             <td>Nombre de pistes</td>
             <td>URL</td>
+            <c:if test="${not empty sessionScope.login}">
+                <td>Acheter</td>
+            </c:if>
             </thead>
             <tbody>
                 <c:forEach var="morceau" items="${sessionScope.res.morceaux}">
@@ -31,6 +34,16 @@
                         <td>${morceau.annee}</td>
                         <td>${morceau.nbPistes}</td>
                         <td><a href="${morceau.url}" target="_blank">Wikip&eacute;dia</td>
+                        <c:if test="${not empty sessionScope.login}">
+                            <td>
+                                <c:if test="${sessionScope.achats.contains(morceau)}">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                </c:if>
+                                <c:if test="${!sessionScope.achats.contains(morceau)}">
+                                    <a href="ServletAchat?idM=${morceau.id}"><span class="glyphicon glyphicon-euro"></span></a>
+                                    </c:if>
+                            </td>
+                        </c:if>
                     </tr>
                 </c:forEach>
             </tbody>
@@ -40,10 +53,10 @@
         <%--<c:set var="next" value=""></c:set>--%>
 
         <%--<c:if test="${empty sessionScope.page || sessionScope.page == 1}">--%>
-            <%--<c:set var="previous" value="disabled"></c:set>--%>
+        <%--<c:set var="previous" value="disabled"></c:set>--%>
         <%--</c:if>--%>
         <%--<c:if test="${sessionScope.res.morceaux.size() < 10}">--%>
-            <%--<c:set var="next" value="disabled"></c:set>--%>
+        <%--<c:set var="next" value="disabled"></c:set>--%>
         <%--</c:if>--%>
         <!--<ul class="pager">-->
             <!--<li class="previous ${previous}"><a href="ServletResultatRecherche?t=Genres&q=${sessionScope.res.id}&page=${sessionScope.page - 1}">&larr; Page pr&eacute;c&eacute;dente</a></li>-->

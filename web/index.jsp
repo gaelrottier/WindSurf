@@ -26,6 +26,11 @@
                 Vous avez &eacute;t&eacute; d&eacute;connect&eacute;.
             </div>
         </c:if>
+        <c:if test="${sessionScope.message == 'achat'}">
+            <div class="alert alert-success">
+                Le morceau ${sessionScope.morceau} a bien &eacute;t&eacute; ajout&eacute; &agrave; votre compte.
+            </div>
+        </c:if>
         <c:remove var="message" scope="session"/>
 
         <c:import url="/WEB-INF/menu.jsp"></c:import>
