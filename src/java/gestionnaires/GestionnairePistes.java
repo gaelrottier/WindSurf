@@ -25,7 +25,7 @@ public class GestionnairePistes {
 
     public Piste getPiste(String nom, Artiste a) {
         Query q = em.createQuery("select p from Piste p where lower(p.nom) = :nom and p.artiste = :a");
-        q.setParameter("nom", nom);
+        q.setParameter("nom", nom.toLowerCase());
         q.setParameter("a", a);
         
         return (Piste) q.getSingleResult();

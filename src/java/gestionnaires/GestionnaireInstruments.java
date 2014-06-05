@@ -1,5 +1,6 @@
 package gestionnaires;
 
+import java.util.Collection;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -23,6 +24,13 @@ public class GestionnaireInstruments {
         }
 
         return i;
+    }
+
+    public Collection<Instrument> searchInstrument(String search) {
+        Query q = em.createQuery("select i from Instrument i where lower(i.nom) LIKE :nom");
+        q.setParameter("nom", "%" + search.toLowerCase() + "%");
+
+        return (Collection<Instrument>) q.getResultList();
     }
 
     public Instrument getInstrument(String nom) {

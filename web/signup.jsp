@@ -16,7 +16,7 @@
         
         <c:if test="${empty sessionScope.login}">
             <!-- G&eacute;n&eacute;r&eacute; via http://bootsnip.com/forms?version=3 !-->
-            <form class="form-horizontal" action="ServletUsers" method="post">
+            <form class="form-horizontal disconnected" action="ServletUsers" method="post">
                 <fieldset>
 
                     <!-- Form Name -->

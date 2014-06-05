@@ -13,15 +13,15 @@ public class GestionnaireGenres {
 
     @PersistenceContext
     EntityManager em;
-    
-    public void creerGenres(){
+
+    public void creerGenres() {
         setGenre("Rock");
         setGenre("Rap");
         setGenre("Reggae");
         setGenre("Blues");
         setGenre("Variété");
     }
-    
+
     public Genre setGenre(String nom) {
         Genre g;
 
@@ -34,13 +34,20 @@ public class GestionnaireGenres {
 
         return g;
     }
-    
-    public void addMorceau(Genre g, Morceau m){
+
+    public void addMorceau(Genre g, Morceau m) {
         Collection<Morceau> cm = g.getMorceaux();
         cm.add(m);
         g.setMorceaux(cm);
-        
+
         em.merge(g);
+    }
+
+    public Collection<Genre> searchGenre(String search) {
+        Query q = em.createQuery("select g from Genre g where lower(g.nom) LIKE :nom");
+        q.setParameter("nom", "%" + search.toLowerCase() + "%");
+
+        return (Collection<Genre>) q.getResultList();
     }
 
     public Genre getGenre(String nom) {

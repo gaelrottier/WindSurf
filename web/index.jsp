@@ -22,7 +22,7 @@
             </div>
         </c:if>
         <c:if test="${sessionScope.message == 'deco'}">
-            <div class="alert alert-info">
+            <div class="alert alert-info disconnected">
                 Vous avez &eacute;t&eacute; d&eacute;connect&eacute;.
             </div>
         </c:if>

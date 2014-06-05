@@ -20,45 +20,50 @@
         <c:remove var="message" scope="session"/>
 
         <c:import url="/WEB-INF/menu.jsp"></c:import>
-        <c:if test="${empty sessionScope.listeAbos}">
-            <c:redirect url="ServletAbos"></c:redirect>
-        </c:if>
-        <c:if test="${not empty sessionScope.userAbo}">
-            <div class="row">
-                <div class="col-lg-2 col-lg-offset-1"><br>
-                    <p>
+        <c:if test="${empty sessionScope.login}">
+            <div class="disconnected">
+            </c:if>
+            <c:if test="${empty sessionScope.listeAbos}">
+                <c:redirect url="ServletAbos"></c:redirect>
+            </c:if>
+            <c:if test="${not empty sessionScope.userAbo}">
+                <div class="row">
+                    <div class="col-lg-2 col-lg-offset-1"><br>
+                        <p>
                         <h3>Votre abonnement : </h3>
                         <h2 class="tabulation"><c:out value="${sessionScope.userAbo.nom}"></c:out></h2>
-                        <br><br>
-                    </p>
-                </div>
+                            <br><br>
+                            </p>
+                        </div>
+                    </div>
+            </c:if>
+
+            <div class="row">
+                <p>
+                    <c:if test="${not empty sessionScope.login}">
+                    <h3 class="col-lg-3 col-lg-offset-1">Choisissez un abonnement : </h3>
+                </c:if>
+                <c:if test="${empty sessionScope.login}">
+                    <h3 class="col-lg-3 col-lg-offset-1">Liste des abonnements : </h3>
+                </c:if>
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <c:forEach var="a" items="${sessionScope.listeAbos}">
+                    <form action="ServletAbos" method="post">
+                        <button class="col-lg-2">
+                            <h1>${a.nom}</h1>
+                            <h1>${a.prix}<span class="glyphicon glyphicon-euro"></span></h1>
+                        </button>
+                        <input type="hidden" name="action" value="choixAbo">
+                        <input type="hidden" name="abo" value="${a.id}">
+                    </form>
+                </c:forEach>
+            </div>
+            <c:if test="${empty sessionScope.login}">
             </div>
         </c:if>
-
-    <div class="row">
-        <p>
-            <c:if test="${not empty sessionScope.login}">
-                <h3 class="col-lg-3 col-lg-offset-1">Choisissez un abonnement : </h3>
-            </c:if>
-            <c:if test="${empty sessionScope.login}">
-                <h3 class="col-lg-3 col-lg-offset-1">Liste des abonnements : </h3>
-            </c:if>
-        </p>
-    </div>
-        
-    <div class="row">
-        <div class="col-lg-1"></div>
-        <c:forEach var="a" items="${sessionScope.listeAbos}">
-            <form action="ServletAbos" method="post">
-                <button class="col-lg-2">
-                    <h1>${a.nom}</h1>
-                    <h1>${a.prix}<span class="glyphicon glyphicon-euro"></span></h1>
-                </button>
-                <input type="hidden" name="action" value="choixAbo">
-                <input type="hidden" name="abo" value="${a.id}">
-            </form>
-        </c:forEach>
-    </div>
-
-</body>
+    </body>
 </html>

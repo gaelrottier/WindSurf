@@ -20,6 +20,9 @@ public class GestionnaireMorceaux {
     @EJB
     private GestionnaireGenres gestionnaireGenres;
 
+    @EJB
+    private GestionnaireArtistes gestionnaireArtistes;
+
     public Morceau creerMorceau(String titre, int nbPistes, int annee, String url) {
         Morceau m = new Morceau(titre, nbPistes, annee, url);
 
@@ -32,6 +35,15 @@ public class GestionnaireMorceaux {
         m.setArtiste(a);
 
         em.merge(m);
+
+        gestionnaireArtistes.addMorceau(a, m);
+    }
+
+    public Collection<Morceau> searchMorceau(String search) {
+        Query q = em.createQuery("select m from Morceau m where lower(m.titre) LIKE :titre");
+        q.setParameter("titre", "%" + search.toLowerCase() + "%");
+
+        return (Collection<Morceau>) q.getResultList();
     }
 
     public void addInstrument(Morceau m, Instrument i) {
@@ -59,12 +71,11 @@ public class GestionnaireMorceaux {
         em.merge(m);
 
         gestionnaireGenres.addMorceau(g, m);
-
     }
 
     public Morceau getMorceau(String titre) {
-        Query q = em.createQuery("select m from Morceau m where m.titre = :titre");
-        q.setParameter("titre", titre);
+        Query q = em.createQuery("select m from Morceau m where lower(m.titre) = :titre");
+        q.setParameter("titre", titre.toLowerCase());
 
         return (Morceau) q.getSingleResult();
     }

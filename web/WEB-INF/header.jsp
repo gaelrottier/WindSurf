@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="js/autocompleteSearchBox.js"></script>
         <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
         <link rel="stylesheet" href="css/style.css">
     </head>
