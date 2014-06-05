@@ -49,13 +49,15 @@
                     <td>Piste n°</td>
                     <td>Instrument</td>
                     <td>Nom de la piste</td>
+                    <td>Difficult&eacute;</td>
                     </thead>
                     <tbody>
                         <c:forEach var="piste" items="${sessionScope.res.pistes}">
                             <tr>
                                 <td>${piste.num}</a></td>
-                                 <td><a href="ServletResultatRecherche?t=Instruments&q=${piste.instrument.id}">${piste.instrument.nom}</a></td>
+                                <td><a href="ServletResultatRecherche?t=Instruments&q=${piste.instrument.id}">${piste.instrument.nom}</a></td>
                                 <td>${piste.nom}</td>
+                                <td>${piste.difficulte}</td>
                             </tr>
                         </c:forEach>
                     </tbody>
