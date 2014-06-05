@@ -10,6 +10,7 @@ import modeles.Artiste;
 import modeles.Genre;
 import modeles.Instrument;
 import modeles.Morceau;
+import modeles.Piste;
 
 @Stateless
 public class GestionnaireMorceaux {
@@ -23,12 +24,27 @@ public class GestionnaireMorceaux {
     @EJB
     private GestionnaireArtistes gestionnaireArtistes;
 
-    public Morceau creerMorceau(String titre, int nbPistes, int annee, String url) {
-        Morceau m = new Morceau(titre, nbPistes, annee, url);
+    public Morceau creerMorceau(String titre, int nbPistes, int annee) {
+        Morceau m = new Morceau(titre, nbPistes, annee, "http://fr.wikipedia.org/wiki/" + titre);
 
         em.persist(m);
 
         return m;
+    }
+
+    public void addPiste(Morceau m, Piste p) {
+        Collection<Piste> pc = m.getPistes();
+
+        if (!pc.contains(p)) {
+            pc.add(p);
+            m.setPistes(pc);
+
+            em.merge(m);
+        }
+    }
+
+    public Collection<Piste> getPistes(Morceau m) {
+        return m.getPistes();
     }
 
     public void setArtiste(Morceau m, Artiste a) {;

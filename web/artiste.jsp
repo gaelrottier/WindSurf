@@ -2,7 +2,10 @@
 <!DOCTYPE html>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
-    <c:if test="${sessionScope.res.class != 'modeles.Artiste'}">
+    <c:if test="${empty sessionScope.res}">
+        <c:redirect url="index.jsp"></c:redirect>
+    </c:if>
+    <c:if test="${sessionScope.res.class != 'class modeles.Artiste'}">
         <c:redirect url="index.jsp"></c:redirect>
     </c:if>
     <c:import url="/WEB-INF/header.jsp">
@@ -12,7 +15,13 @@
         <c:import url="/WEB-INF/menu.jsp"></c:import>
         <c:if test="${not empty sessionScope.res}">
             <div class="container">
-                <div class="row disconnected">
+                <c:if test="${empty sessionScope.login}">
+                    <c:set var="disco" value="disconnected"></c:set>
+                </c:if>
+                <c:if test="${not empty sessionScope.login}">
+                    <c:set var="disco" value=""></c:set>
+                </c:if>
+                <div class="row ${disco}">
                     <div class="col-lg-6">
                         <h1>Artiste : <strong>${sessionScope.res.nom}</strong></h1>
                     </div>
@@ -33,7 +42,7 @@
                                     <td><a href="ServletResultatRecherche?t=Genres&q=${morceau.genre.id}">${morceau.genre.nom}</a></td>
                                     <td>${morceau.nbPistes}</td>
                                     <td>${morceau.annee}</td>
-                                    <td>${morceau.url}</td>
+                                    <td><a href="${morceau.url}" target="_blank">Wikip&eacute;dia</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>

@@ -29,5 +29,18 @@
         <c:remove var="message" scope="session"/>
 
         <c:import url="/WEB-INF/menu.jsp"></c:import>
+
+        <div class="container disconnected">
+            <div class="row">
+                <h1 class="col-lg-offset-2" style="color: #843534; font-size: 10em;"><strong>Bienvenue</strong></h1>
+            </div>
+            <div class="row">
+                <span class="glyphicon glyphicon-arrow-up col-lg-offset-5" style="font-size: 5em;"></span>
+                <p class="col-lg-offset-1">
+                    <h1>Vous pouvez rechercher des artistes, des chansons, des genres de musique
+                        et des instruments dans la barre de recherche situ&eacute;e en haut de la page.</h1>
+                </p>
+            </div>
+        </div>
     </body>
 </html>

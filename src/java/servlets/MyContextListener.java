@@ -24,6 +24,7 @@ import modeles.Artiste;
 import modeles.Genre;
 import modeles.Instrument;
 import modeles.Morceau;
+import modeles.Piste;
 
 @WebListener
 public class MyContextListener implements ServletContextListener {
@@ -79,6 +80,7 @@ public class MyContextListener implements ServletContextListener {
         Instrument in;
         Morceau mc;
         Genre g;
+        Piste pi;
         int nbPistes;
 
         for (int i = 0; i < Json.size(); i++) {
@@ -95,7 +97,7 @@ public class MyContextListener implements ServletContextListener {
                 a = gestionnaireArtistes.creerArtiste(artiste, "", "");
 
                 morceauTitre = morceauFullNom.substring(m.end());
-                mc = gestionnaireMorceaux.creerMorceau(morceauTitre, 0, 2000, "");
+                mc = gestionnaireMorceaux.creerMorceau(morceauTitre, 0, 2000);
 
                 genre = "";
                 int jsonSizeSurCinq = Json.size() / 5;
@@ -132,7 +134,7 @@ public class MyContextListener implements ServletContextListener {
                         instrument = m.group(0).toString();
                         instrument = instrument.substring(0, instrument.length() - 1);
 
-                        in = gestionnaireInstruments.setInstrument(instrument, 3);
+                        in = gestionnaireInstruments.creerInstrument(instrument, 3);
                         gestionnaireMorceaux.addInstrument(mc, in);
                         gestionnaireInstruments.addMorceau(in, mc);
 
@@ -140,7 +142,10 @@ public class MyContextListener implements ServletContextListener {
                         if (Character.isDigit(piste.charAt(0))) {
                             piste = piste.substring(2);
                         }
-                        gestionnairePistes.setPiste(piste, a, in);
+                        pi = gestionnairePistes.creerPiste(piste, a, in);
+                        gestionnairePistes.setMorceau(pi, mc);
+                        gestionnaireMorceaux.addPiste(mc, pi);
+                        gestionnairePistes.setNumero(pi, nbPistes);
                     }
                 }
 

@@ -7,7 +7,7 @@ function showData(value) {
             type: "POST",
             async: false,
             success: function(data) {
-                html = "";
+                html = "<option selected></option>";
 
                 data = JSON.parse(data);
 
@@ -30,7 +30,7 @@ function showData(value) {
 function searchResultSelected() {
     var label = $(rechercheResults + " :selected").parent().attr('label');
 
-    var id = $(rechercheResults).val();
+    var id = $(rechercheResults + " :selected").val();
 
     window.location.href = "ServletResultatRecherche?t=" + label + "&q=" + id;
 }

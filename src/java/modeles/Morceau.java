@@ -27,6 +27,8 @@ public class Morceau implements Serializable {
     private String titre;
     private int nbPistes;
     @OneToMany
+    private Collection<Piste> pistes = new ArrayList();
+    @OneToMany
     private Collection<Instrument> instruments = new ArrayList<>();
     @OneToOne
     private Artiste artiste;
@@ -54,6 +56,14 @@ public class Morceau implements Serializable {
 
     public String getTitre() {
         return titre;
+    }
+
+    public Collection<Piste> getPistes() {
+        return pistes;
+    }
+
+    public void setPistes(Collection<Piste> pistes) {
+        this.pistes = pistes;
     }
 
     public void setTitre(String titre) {

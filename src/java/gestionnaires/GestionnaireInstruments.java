@@ -14,7 +14,7 @@ public class GestionnaireInstruments {
     @PersistenceContext
     EntityManager em;
 
-    public Instrument setInstrument(String nom, int difficulte) {
+    public Instrument creerInstrument(String nom, int difficulte) {
         Instrument i;
 
         if (exists(nom)) {

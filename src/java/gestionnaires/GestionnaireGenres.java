@@ -15,14 +15,14 @@ public class GestionnaireGenres {
     EntityManager em;
 
     public void creerGenres() {
-        setGenre("Rock");
-        setGenre("Rap");
-        setGenre("Reggae");
-        setGenre("Blues");
-        setGenre("Variété");
+        creerGenre("Rock");
+        creerGenre("Rap");
+        creerGenre("Reggae");
+        creerGenre("Blues");
+        creerGenre("Variété");
     }
 
-    public Genre setGenre(String nom) {
+    public Genre creerGenre(String nom) {
         Genre g;
 
         if (exists(nom)) {

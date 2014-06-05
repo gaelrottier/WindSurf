@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -18,7 +19,28 @@ public class Piste implements Serializable {
     private Artiste artiste;
     @OneToOne
     private Instrument instrument;
+    private String nom;
+    @ManyToOne
+    private Morceau morceau;
+    //Numéro de la piste
+    private int num;
 
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public Morceau getMorceau() {
+        return morceau;
+    }
+
+    public void setMorceau(Morceau morceau) {
+        this.morceau = morceau;
+    }
+    
     public Artiste getArtiste() {
         return artiste;
     }
@@ -34,7 +56,6 @@ public class Piste implements Serializable {
     public void setInstrument(Instrument instrument) {
         this.instrument = instrument;
     }
-    private String nom;
 
     public Piste(String nom) {
         this.nom = nom;
