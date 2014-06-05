@@ -69,7 +69,9 @@ public class ServletResultatRecherche extends HttpServlet {
 
             switch (t) {
                 case "Artistes":
-                    Artiste a = gestionnaireArtistes.getArtisteByIdPaginated(rch, p);
+                    //La pagination ne fonctionne pas
+//                    Artiste a = gestionnaireArtistes.getArtisteByIdPaginated(rch, p);
+                    Artiste a = gestionnaireArtistes.getArtisteById(rch);
                     forwardTo = "artiste.jsp";
                     session.setAttribute("res", a);
                     // Je ne sais pas pourquoi, mais si je ne fais pas de foreach sur la collection, elle n'est pas instanciée
@@ -77,21 +79,24 @@ public class ServletResultatRecherche extends HttpServlet {
                     }
                     break;
                 case "Morceaux":
-                    Morceau m = gestionnaireMorceaux.getMorceauByIdPaginated(rch, p);
+//                    Morceau m = gestionnaireMorceaux.getMorceauByIdPaginated(rch, p);
+                    Morceau m = gestionnaireMorceaux.getMorceauById(rch);
                     forwardTo = "morceau.jsp";
                     session.setAttribute("res", m);
                     for (Instrument in : m.getInstruments()) {
                     }
                     break;
                 case "Instruments":
-                    Instrument i = gestionnaireInstruments.getInstrumentByIdPaginated(rch, p);
+//                    Instrument i = gestionnaireInstruments.getInstrumentByIdPaginated(rch, p);
+                    Instrument i = gestionnaireInstruments.getInstrumentById(rch);
                     forwardTo = "listeResultats.jsp";
                     session.setAttribute("res", i);
                     for (Morceau mc : i.getMorceaux()) {
                     }
                     break;
                 case "Genres":
-                    Genre g = gestionnaireGenres.getGenreByIdPaginated(rch, p);
+//                    Genre g = gestionnaireGenres.getGenreByIdPaginated(rch, p);
+                    Genre g = gestionnaireGenres.getGenreById(rch);
                     forwardTo = "listeResultats.jsp";
                     session.setAttribute("res", g);
                     for (Morceau mc : g.getMorceaux()) {
