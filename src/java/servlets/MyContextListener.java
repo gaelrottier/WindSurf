@@ -134,7 +134,7 @@ public class MyContextListener implements ServletContextListener {
                         instrument = m.group(0).toString();
                         instrument = instrument.substring(0, instrument.length() - 1);
 
-                        in = gestionnaireInstruments.creerInstrument(instrument, 3);
+                        in = gestionnaireInstruments.creerInstrument(instrument);
                         gestionnaireMorceaux.addInstrument(mc, in);
                         gestionnaireInstruments.addMorceau(in, mc);
 
@@ -142,7 +142,7 @@ public class MyContextListener implements ServletContextListener {
                         if (Character.isDigit(piste.charAt(0))) {
                             piste = piste.substring(2);
                         }
-                        pi = gestionnairePistes.creerPiste(piste, a, in);
+                        pi = gestionnairePistes.creerPiste(piste, a, in, 3);
                         gestionnairePistes.setMorceau(pi, mc);
                         gestionnaireMorceaux.addPiste(mc, pi);
                         gestionnairePistes.setNumero(pi, nbPistes);

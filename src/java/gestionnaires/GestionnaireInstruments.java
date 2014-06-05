@@ -14,13 +14,13 @@ public class GestionnaireInstruments {
     @PersistenceContext
     EntityManager em;
 
-    public Instrument creerInstrument(String nom, int difficulte) {
+    public Instrument creerInstrument(String nom) {
         Instrument i;
 
         if (exists(nom)) {
             i = getInstrument(nom);
         } else {
-            i = new Instrument(nom.toLowerCase(), difficulte);
+            i = new Instrument(nom.toLowerCase());
             em.persist(i);
         }
 

@@ -22,7 +22,6 @@ public class Instrument implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nom;
-    private int difficulte;
     @OneToMany
     private Collection<Morceau> morceaux = new ArrayList<>();
 
@@ -30,9 +29,8 @@ public class Instrument implements Serializable {
 
     }
 
-    public Instrument(String nom, int difficulte) {
+    public Instrument(String nom) {
         this.nom = nom;
-        this.difficulte = difficulte;
     }
 
     public Collection<Morceau> getMorceaux() {
@@ -49,14 +47,6 @@ public class Instrument implements Serializable {
 
     public void setNom(String nom) {
         this.nom = nom;
-    }
-
-    public int getDifficulte() {
-        return difficulte;
-    }
-
-    public void setDifficulte(int difficulte) {
-        this.difficulte = difficulte;
     }
 
     public int getId() {

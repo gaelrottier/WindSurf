@@ -24,6 +24,7 @@ public class Piste implements Serializable {
     private Morceau morceau;
     //Numéro de la piste
     private int num;
+    private int difficulte;
 
     public int getNum() {
         return num;
@@ -37,10 +38,18 @@ public class Piste implements Serializable {
         return morceau;
     }
 
+    public int getDifficulte() {
+        return difficulte;
+    }
+
+    public void setDifficulte(int difficulte) {
+        this.difficulte = difficulte;
+    }
+
     public void setMorceau(Morceau morceau) {
         this.morceau = morceau;
     }
-    
+
     public Artiste getArtiste() {
         return artiste;
     }
@@ -57,8 +66,9 @@ public class Piste implements Serializable {
         this.instrument = instrument;
     }
 
-    public Piste(String nom) {
+    public Piste(String nom, int difficulte) {
         this.nom = nom;
+        this.difficulte = difficulte;
     }
 
     public Piste() {

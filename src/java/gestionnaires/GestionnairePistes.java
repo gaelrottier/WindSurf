@@ -15,8 +15,8 @@ public class GestionnairePistes {
     @PersistenceContext
     EntityManager em;
 
-    public Piste creerPiste(String nom, Artiste a, Instrument i) {
-        Piste p = new Piste(nom);
+    public Piste creerPiste(String nom, Artiste a, Instrument i, int difficulte) {
+        Piste p = new Piste(nom, difficulte);
 
         p.setArtiste(a);
         p.setInstrument(i);
