@@ -10,10 +10,6 @@ import gestionnaires.GestionnaireGenres;
 import gestionnaires.GestionnaireInstruments;
 import gestionnaires.GestionnaireMorceaux;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Collection;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,14 +31,14 @@ public class ServletResultatRecherche extends HttpServlet {
 
     @EJB
     private GestionnaireArtistes gestionnaireArtistes;
-    @EJB
 
+    @EJB
     private GestionnaireInstruments gestionnaireInstruments;
-    @EJB
 
+    @EJB
     private GestionnaireGenres gestionnaireGenres;
-    @EJB
 
+    @EJB
     private GestionnaireMorceaux gestionnaireMorceaux;
 
     /**
@@ -59,14 +55,21 @@ public class ServletResultatRecherche extends HttpServlet {
         String t = request.getParameter("t");
         String q = request.getParameter("q");
         String forwardTo = "index.jsp";
+        String page = request.getParameter("page");
         HttpSession session = request.getSession();
+        int p = 1;
 
+        if (page != null) {
+            p = Integer.parseInt(page);
+        }
+
+        System.out.println("Page  : "+p);
         if (t != null && q != null) {
             int rch = Integer.parseInt(q);
 
             switch (t) {
                 case "Artistes":
-                    Artiste a = gestionnaireArtistes.getArtisteById(rch);
+                    Artiste a = gestionnaireArtistes.getArtisteByIdPaginated(rch, p);
                     forwardTo = "artiste.jsp";
                     session.setAttribute("res", a);
                     // Je ne sais pas pourquoi, mais si je ne fais pas de foreach sur la collection, elle n'est pas instanciée
@@ -74,21 +77,21 @@ public class ServletResultatRecherche extends HttpServlet {
                     }
                     break;
                 case "Morceaux":
-                    Morceau m = gestionnaireMorceaux.getMorceauById(rch);
+                    Morceau m = gestionnaireMorceaux.getMorceauByIdPaginated(rch, p);
                     forwardTo = "morceau.jsp";
                     session.setAttribute("res", m);
                     for (Instrument in : m.getInstruments()) {
                     }
                     break;
                 case "Instruments":
-                    Instrument i = gestionnaireInstruments.getInstrumentById(rch);
+                    Instrument i = gestionnaireInstruments.getInstrumentByIdPaginated(rch, p);
                     forwardTo = "listeResultats.jsp";
                     session.setAttribute("res", i);
                     for (Morceau mc : i.getMorceaux()) {
                     }
                     break;
                 case "Genres":
-                    Genre g = gestionnaireGenres.getGenreById(rch);
+                    Genre g = gestionnaireGenres.getGenreByIdPaginated(rch, p);
                     forwardTo = "listeResultats.jsp";
                     session.setAttribute("res", g);
                     for (Morceau mc : g.getMorceaux()) {
@@ -97,7 +100,7 @@ public class ServletResultatRecherche extends HttpServlet {
                 default:
                     break;
             }
-
+            session.setAttribute("page", p);
         }
 
         response.sendRedirect(forwardTo);

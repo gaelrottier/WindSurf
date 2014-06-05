@@ -9,8 +9,8 @@
             <div class="navbar-collapse collapse">
                 <div class="row">
                     <div class="col-lg-5 menu-inscription" role="search">
-                        <input type="text" onfocus="showData(this.value);" onblur="$('#rechercheResults').hide();" id="recherche" class="form-control" placeholder="Rechercher un artiste, une musique, un instrument ou un genre">
-                        <select id="rechercheResults" class="form-control" onchange="searchResultSelected();" onfocus="$(this).show();" onblur="$(this).hide();" style="display:none;">
+                        <input type="text" id="recherche" class="form-control" placeholder="Rechercher un artiste, une musique, un instrument ou un genre">
+                        <select id="rechercheResults" class="form-control" style="display:none;">
                         </select>
                     </div>
 

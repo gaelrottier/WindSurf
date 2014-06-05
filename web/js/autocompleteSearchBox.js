@@ -36,7 +36,27 @@ function searchResultSelected() {
 }
 
 $(document).ready(function() {
-    $('#recherche').bind('keypress', function() {
+    $('#recherche').bind('keypress keyup keydown focus', function() {
         showData($('#recherche').val());
     });
+
+    $('#recherche').bind('blur', function() {
+        hideResults();
+    });
+
+    $('#rechercheResults').bind('change', function() {
+        searchResultSelected();
+    });
+
+    $('#rechercheResults').bind('focus', function() {
+        $('#rechercheResults').show();
+    });
+
+    $('#rechercheResults').bind('blur', function() {
+        $('#rechercheResults').hide();
+    });
+
 });
+function hideResults() {
+    $('#rechercheResults').hide();
+}

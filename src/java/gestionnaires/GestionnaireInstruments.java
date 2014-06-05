@@ -1,6 +1,7 @@
 package gestionnaires;
 
 import java.util.Collection;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -60,6 +61,22 @@ public class GestionnaireInstruments {
 
     public Instrument getInstrumentById(int id) {
         return em.find(Instrument.class, id);
+    }
+
+    public Instrument getInstrumentByIdPaginated(int id, int page) {
+        Instrument i = em.find(Instrument.class, id);
+        int fromIndex = page * 10 - 10;
+        int toIndex = page * 10;
+
+        if (page * 10 > i.getMorceaux().size()) {
+            toIndex = page * 10 - i.getMorceaux().size();
+        }
+
+        Collection<Morceau> morceaux = ((List) i.getMorceaux()).subList(fromIndex, toIndex);
+
+        i.setMorceaux(morceaux);
+
+        return i;
     }
 
     private boolean exists(String nom) {

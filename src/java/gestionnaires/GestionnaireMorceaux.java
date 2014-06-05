@@ -1,6 +1,7 @@
 package gestionnaires;
 
 import java.util.Collection;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -91,6 +92,32 @@ public class GestionnaireMorceaux {
 
     public Morceau getMorceauById(int id) {
         return em.find(Morceau.class, id);
+    }
+
+    public Morceau getMorceauByIdPaginated(int id, int page) {
+        Morceau m = em.find(Morceau.class, id);
+        
+        
+        Collection<Piste> pistes = m.getPistes();
+        
+        int fromIndex = page * 10 - 10;
+        int toIndex = page * 10;
+
+        if (page * 10 > pistes.size()) {
+            toIndex = page * 10 - pistes.size();
+        }
+        System.out.println("Pistes.size()" + pistes.size());
+        try {
+            pistes = ((List) pistes).subList(fromIndex, toIndex);
+
+            m.setPistes(pistes);
+        } catch (Exception e) {
+            System.out.println("toIndex : " + toIndex);
+            System.out.println("fromIndex : " + fromIndex);
+            System.out.println("Exception : " + e.getMessage());
+        }
+
+        return m;
     }
 
     public Morceau getMorceau(String titre) {

@@ -23,7 +23,7 @@
             </c:if>
             <div class="row ${disco}">
                 <div class="col-lg-3">
-                    <h1>Artiste : <strong>${sessionScope.res.artiste.nom}</strong></h1>
+                    <h1>Artiste : <a href="ServletResultatRecherche?t=Artistes&q=${sessionScope.res.artiste.id}"><strong>${sessionScope.res.artiste.nom}</strong></a></h1>
                 </div>
                 <div class="col-lg-6">
                     <h1>Chanson : <strong>${sessionScope.res.titre}</strong></h1>
@@ -62,6 +62,20 @@
                         </c:forEach>
                     </tbody>
                 </table>
+                
+                <c:set var="previous" value=""></c:set>
+                <c:set var="next" value=""></c:set>
+                
+                <c:if test="${empty sessionScope.page || sessionScope.page == 1}">
+                    <c:set var="previous" value="disabled"></c:set>
+                </c:if>
+                <c:if test="${sessionScope.res.pistes.size() < 10}">
+                    <c:set var="next" value="disabled"></c:set>
+                </c:if>
+                <ul class="pager">
+                    <li class="previous ${previous}"><a href="ServletResultatRecherche?t=Morceaux&q=${sessionScope.res.id}&page=${sessionScope.page - 1}">&larr; Page pr&eacute;c&eacute;dente</a></li>
+                    <li class="next ${next}"><a href="ServletResultatRecherche?t=Morceaux&q=${sessionScope.res.id}&page=${sessionScope.page + 1}">Page suivante &rarr;</a></li>
+                </ul>
 
             </div>
         </div>

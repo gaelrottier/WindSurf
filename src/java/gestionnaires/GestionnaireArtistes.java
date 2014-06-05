@@ -1,6 +1,8 @@
 package gestionnaires;
 
+import com.google.common.collect.Lists;
 import java.util.Collection;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -38,6 +40,22 @@ public class GestionnaireArtistes {
 
     public Artiste getArtisteById(int id) {
         return em.find(Artiste.class, id);
+    }
+
+    public Artiste getArtisteByIdPaginated(int id, int page) {
+        Artiste a = em.find(Artiste.class, id);
+        int fromIndex = page * 10 - 10;
+        int toIndex = page * 10;
+
+        if (page * 10 > a.getMorceaux().size()) {
+            toIndex = page * 10 - a.getMorceaux().size();
+        }
+
+        Collection<Morceau> morceaux = ((List) a.getMorceaux()).subList(fromIndex, toIndex);
+
+        a.setMorceaux(morceaux);
+
+        return a;
     }
 
     public void addMorceau(Artiste a, Morceau m) {

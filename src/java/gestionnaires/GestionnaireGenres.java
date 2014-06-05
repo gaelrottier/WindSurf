@@ -1,6 +1,7 @@
 package gestionnaires;
 
 import java.util.Collection;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -55,6 +56,22 @@ public class GestionnaireGenres {
 
     public Genre getGenreById(int id) {
         return em.find(Genre.class, id);
+    }
+
+    public Genre getGenreByIdPaginated(int id, int page) {
+        Genre g = em.find(Genre.class, id);
+        int fromIndex = page * 10 - 10;
+        int toIndex = page * 10;
+
+        if (page * 10 > g.getMorceaux().size()) {
+            toIndex = page * 10 - g.getMorceaux().size();
+        }
+
+        Collection<Morceau> morceaux = ((List) g.getMorceaux()).subList(fromIndex, toIndex);
+
+        g.setMorceaux(morceaux);
+
+        return g;
     }
 
     public Genre getGenre(String nom) {
