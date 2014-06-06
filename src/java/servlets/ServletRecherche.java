@@ -66,6 +66,18 @@ public class ServletRecherche extends HttpServlet {
     /**
      * Handles the HTTP <code>POST</code> method.
      *
+     * Regarde, pour chaque Artiste, Instrument, Piste et Morceau, si son
+     * nom/titre contient la chaîne de caractères présente dans le paramètre
+     * "recherche". Si une occurrence est trouvée, elle est ajoutée à la liste
+     * des résultats.
+     *
+     * Dans le cas des artistes, si une correspondance est trouvée dans la bdd,
+     * les morceaux le concernant sont aussi ajoutés à la liste des résultats,
+     * en évitant les doublons.
+     *
+     * Renvoie ensuite les résultats en Json sur le PrintWriter de la
+     * <response>, car cette servlet est destinée à être utilisée en Ajax.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -110,6 +122,12 @@ public class ServletRecherche extends HttpServlet {
 
             results.put("Instruments", result);
 
+            /**
+             * Si les objets result et res ne sont pas ré-instanciés après
+             * chaque boucle, le Json de retour ne contiendra dans chaque clé
+             * ("Artistes", "Morceaux", "Genres", "Instruments")que les valeurs
+             * de la dernière boucle effectuée (ici "Artistes").
+             */
             result = new JSONArray();
             res = new JSONObject();
             Genre g;

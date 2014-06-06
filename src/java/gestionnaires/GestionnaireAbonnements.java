@@ -13,6 +13,9 @@ public class GestionnaireAbonnements {
     @PersistenceContext
     private EntityManager em;
 
+    /**
+     * Crée les abonnements
+     */
     public void creerAbonnements() {
         creerAbonnement(0.0, "Gratuit", 0);
         creerAbonnement(3.0, "Week-end", 48);
@@ -21,13 +24,27 @@ public class GestionnaireAbonnements {
         creerAbonnement(200.0, "A vie", 0);
     }
 
+    /**
+     * Crée un abonnement
+     *
+     * @param prix Le prix
+     * @param nom Le nom
+     * @param duree La durée (en h)
+     * @return L'abonnement créé
+     */
     public Abonnement creerAbonnement(double prix, String nom, int duree) {
         Abonnement a = new Abonnement(prix, nom, duree);
         em.persist(a);
-        
+
         return a;
     }
 
+    /**
+     * Renvoie l'abonnement spécifié par le <nom>
+     *
+     * @param nom Le nom de l'abonnement
+     * @return L'abonnement trouvé
+     */
     public Abonnement getAboByName(String nom) {
 
         Query q = em.createQuery("select a from Abonnement a where a.nom = :nom");
@@ -35,11 +52,23 @@ public class GestionnaireAbonnements {
 
         return (Abonnement) q.getSingleResult();
     }
-    
-    public Abonnement getAboById(int id){
+
+    /**
+     * Renvoie l'abonnement recherché par son <id>
+     *
+     * @param id L'id de l'abonnement
+     * @return L'abonnement trouvé
+     */
+    public Abonnement getAboById(int id) {
         return em.find(Abonnement.class, id);
     }
 
+    /**
+     * Renvoie une liste d'abonnements comprenant tous les abonnements, classés
+     * par ordre d'id
+     *
+     * @return La liste des abonnements
+     */
     public Collection<Abonnement> getAllAbos() {
         Query q = em.createQuery("select a from Abonnement a ORDER BY a.id");
 

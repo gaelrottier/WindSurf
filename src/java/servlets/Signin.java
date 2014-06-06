@@ -53,6 +53,11 @@ public class Signin extends HttpServlet {
     /**
      * Handles the HTTP <code>POST</code> method.
      *
+     * Connecte l'utilisateur au site si les paramètres fournis (login et
+     * password) correspondent à une occurrence de la base de données. Si oui,
+     * un cookie est placé sur l'ordinateur du client informant qu'il est
+     * connecté. Redirige ensuite sur la page d'index.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -76,7 +81,7 @@ public class Signin extends HttpServlet {
                         session.setAttribute("login", login);
                         //2 semaines (14 jours)
                         session.setMaxInactiveInterval(1209600);
-                        message="connecte";
+                        message = "connecte";
                     } else {
                         message = "badIds";
                     }

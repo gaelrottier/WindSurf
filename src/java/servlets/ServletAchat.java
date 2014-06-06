@@ -26,6 +26,11 @@ public class ServletAchat extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
+     * Si l'utilisateur est connecté, ajoute le morceau défini par "idM" dans sa
+     * liste d'achats.
+     *
+     * Renvoie ensuite sur la page d'accueil
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs

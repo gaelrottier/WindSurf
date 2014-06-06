@@ -1,14 +1,22 @@
 package utils;
 
-import com.sun.mail.util.LogOutputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public abstract class MD5Hash {
 
+    /**
+     * Crypte le <String> entré en paramètre en MD5 et le retourne sous forme de
+     * <String>.
+     * Cette fonction a été récupérée sur StackOverflow, mais le lien a été
+     * perdu.
+     *
+     * @param str La chaîne de caractères à crypter
+     * @return La chaîne de caractères cryptée
+     */
     public static String encrypt(String str) {
         String generatedPassword = null;
-        
+
         try {
             // Create MessageDigest instance for MD5
             MessageDigest md = MessageDigest.getInstance("MD5");

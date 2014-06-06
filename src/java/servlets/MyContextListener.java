@@ -50,6 +50,11 @@ public class MyContextListener implements ServletContextListener {
     @EJB
     private GestionnaireGenres gestionnaireGenres;
 
+    /**
+     * Crée les Abonnements, un Utilisateur, les Genres, et parse le Json.
+     * Ajoute toutes ces données dans la bdd
+     * @param sce Le contexte de l'application
+     */
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         gestionnaireAbonnements.creerAbonnements();
@@ -69,6 +74,14 @@ public class MyContextListener implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent sce) {
     }
 
+    /**
+     * Ajoute les données contenues dans <Json> dans la base de données, 
+     * découpées selon le nom de l'artiste, le titre de la chanson,
+     * les instruments des pistes et les pistes.
+     * Attribue aussi un genre à chaque chanson.
+     * @param Json Les données à insérer dans la bdd (Correspondant au contenu
+     * du fichier "/WEB-INF/musique.json"
+     */
     private void fillDBFromJson(JSONArray Json) {
 
         JSONObject morceau;

@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import modeles.Abonnement;
-import modeles.Utilisateur;
 
 /**
  *
@@ -47,6 +46,14 @@ public class ServletAbos extends HttpServlet {
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
+     *
+     * Récupère la liste des abonnements présents en bdd et l'insère dans un
+     * cookie "listeAbos".
+     *
+     * Récupère aussi l'abonnement de l'utilisateur (dans le cas où il est
+     * connecté) et l'insère dans un cookie "userAbo"
+     *
+     * Redirige ensuite sur la page listant les abonnements.
      *
      * @param request servlet request
      * @param response servlet response

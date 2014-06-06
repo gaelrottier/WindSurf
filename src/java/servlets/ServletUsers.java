@@ -20,7 +20,7 @@ public class ServletUsers extends HttpServlet {
 
     @EJB
     private GestionnaireUtilisateurs gestionnaireUtilisateurs;
-            
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -51,6 +51,10 @@ public class ServletUsers extends HttpServlet {
 
     /**
      * Handles the HTTP <code>POST</code> method.
+     *
+     * Si le paramètre "action" de la requete a pour valeur "creerUtilisateur",
+     * un utilisateur est créé dans la bdd avec les login et password(qui sera
+     * crypté) saisis. Redirige ensuite l'utilisateur sur la page d'index.
      *
      * @param request servlet request
      * @param response servlet response

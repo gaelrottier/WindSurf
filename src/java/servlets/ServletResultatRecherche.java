@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package servlets;
 
 import gestionnaires.GestionnaireArtistes;
@@ -27,10 +22,6 @@ import modeles.Morceau;
 import modeles.Piste;
 import modeles.Utilisateur;
 
-/**
- *
- * @author Goys
- */
 @WebServlet(name = "ServletResultatRecherche", urlPatterns = {"/ServletResultatRecherche"})
 public class ServletResultatRecherche extends HttpServlet {
 
@@ -52,6 +43,16 @@ public class ServletResultatRecherche extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
+     *
+     * Récupère l'Artiste, l'Instrument, le Genre ou le Morceau (défini par le
+     * paramètre "t"), ayant pour id la valeur du paramètre "q".
+     *
+     * Récupère aussi les pistes (dans le cas d'un morceau) ou les morceaux
+     * (dans le cas d'un genre, d'un instrument ou d'un artiste) correspondant à
+     * la recherche, de manière paginée (la page est définie par le paramètre
+     * "p")
+     *
+     * Renvoie ensuite sur la page affichant les résultats.
      *
      * @param request servlet request
      * @param response servlet response

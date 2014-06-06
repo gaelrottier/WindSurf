@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modeles;
 
 import java.io.Serializable;
@@ -28,6 +23,7 @@ public class Morceau implements Serializable {
     private int nbPistes;
     @OneToMany
     private Collection<Piste> pistes = new ArrayList();
+    // N'est pas utilisé par l'application
     @OneToMany
     private Collection<Instrument> instruments = new ArrayList<>();
     @OneToOne

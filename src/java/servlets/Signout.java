@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package servlets;
 
 import java.io.IOException;
@@ -13,10 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author Goys
- */
 @WebServlet(name = "Signout", urlPatterns = {"/Signout"})
 public class Signout extends HttpServlet {
 
@@ -49,7 +40,9 @@ public class Signout extends HttpServlet {
     }
 
     /**
-     * Handles the HTTP <code>POST</code> method.
+     * Handles the HTTP <code>POST</code> method. Déconnecte l'utilisateur si la
+     * valeur du paramètre "action" correspond à "signout". Renvoie ensuite sur
+     * la page d'index.
      *
      * @param request servlet request
      * @param response servlet response
@@ -62,9 +55,9 @@ public class Signout extends HttpServlet {
         String action = request.getParameter("action");
         String message = "";
         String forwardTo = "index.jsp?";
-        
-        if(action != null){
-            if (action.equals("signout")){
+
+        if (action != null) {
+            if (action.equals("signout")) {
                 HttpSession session = request.getSession(false);
                 session.removeAttribute("login");
                 session.removeAttribute("userAbo");
@@ -72,7 +65,7 @@ public class Signout extends HttpServlet {
                 message = "deco";
             }
         }
-        
+
         HttpSession session = request.getSession(false);
         session.setAttribute("message", message);
         response.sendRedirect(forwardTo);
