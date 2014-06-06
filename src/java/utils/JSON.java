@@ -9,11 +9,25 @@ import javax.servlet.ServletContext;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONValue;
 
+/**
+ *
+ * @author Goys
+ */
 public class JSON {
 
+    /**
+     *
+     */
     private static JSONArray Json;
+
+    /**
+     *
+     */
     private final ServletContext sc;
 
+    /**
+     *
+     */
     @EJB
     GestionnaireArtistes gestionnaireArtistes;
 

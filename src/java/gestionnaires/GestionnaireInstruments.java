@@ -8,9 +8,16 @@ import javax.persistence.Query;
 import modeles.Instrument;
 import modeles.Morceau;
 
+/**
+ *
+ * @author Goys
+ */
 @Stateless
 public class GestionnaireInstruments {
 
+    /**
+     *
+     */
     @PersistenceContext
     EntityManager em;
 

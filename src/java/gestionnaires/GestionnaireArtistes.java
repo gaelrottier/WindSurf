@@ -8,9 +8,16 @@ import javax.persistence.Query;
 import modeles.Artiste;
 import modeles.Morceau;
 
+/**
+ *
+ * @author Goys
+ */
 @Stateless
 public class GestionnaireArtistes {
 
+    /**
+     *
+     */
     @PersistenceContext
     private EntityManager em;
 

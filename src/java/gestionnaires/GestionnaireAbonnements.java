@@ -7,9 +7,16 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import modeles.Abonnement;
 
+/**
+ *
+ * @author Goys
+ */
 @Stateless
 public class GestionnaireAbonnements {
 
+    /**
+     *
+     */
     @PersistenceContext
     private EntityManager em;
 

@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ *
+ * @author Goys
+ */
 @WebServlet(name = "Signout", urlPatterns = {"/Signout"})
 public class Signout extends HttpServlet {
 

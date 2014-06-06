@@ -26,27 +26,52 @@ import modeles.Instrument;
 import modeles.Morceau;
 import modeles.Piste;
 
+/**
+ *
+ * @author Goys
+ */
 @WebListener
 public class MyContextListener implements ServletContextListener {
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireAbonnements gestionnaireAbonnements;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireUtilisateurs gestionnaireUtilisateurs;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireArtistes gestionnaireArtistes;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireMorceaux gestionnaireMorceaux;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireInstruments gestionnaireInstruments;
 
+    /**
+     *
+     */
     @EJB
     private GestionnairePistes gestionnairePistes;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireGenres gestionnaireGenres;
 
@@ -70,6 +95,10 @@ public class MyContextListener implements ServletContextListener {
         }
     }
 
+    /**
+     *
+     * @param sce
+     */
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
     }

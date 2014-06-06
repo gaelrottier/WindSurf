@@ -14,17 +14,31 @@ import modeles.Instrument;
 import modeles.Morceau;
 import modeles.Utilisateur;
 
+/**
+ *
+ * @author Goys
+ */
 @Stateless
 public class GestionnaireUtilisateurs {
 
+    /**
+     *
+     */
     @PersistenceContext
     private EntityManager em;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireAbonnements gestionnaireAbonnements;
 
     //Nombre de millisecondes dans 1 heure
-    private final int MS_IN_H = 3600000;
+
+    /**
+     *
+     */
+        private final int MS_IN_H = 3600000;
 
     /**
      * Crée un utilisateur dans la base de données avec comme login <login>,

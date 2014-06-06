@@ -22,21 +22,40 @@ import modeles.Morceau;
 import modeles.Piste;
 import modeles.Utilisateur;
 
+/**
+ *
+ * @author Goys
+ */
 @WebServlet(name = "ServletResultatRecherche", urlPatterns = {"/ServletResultatRecherche"})
 public class ServletResultatRecherche extends HttpServlet {
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireArtistes gestionnaireArtistes;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireInstruments gestionnaireInstruments;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireGenres gestionnaireGenres;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireMorceaux gestionnaireMorceaux;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireUtilisateurs gestionnaireUtilisateurs;
 

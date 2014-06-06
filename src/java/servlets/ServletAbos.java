@@ -25,8 +25,15 @@ import modeles.Abonnement;
 @WebServlet(name = "ServletAbos", urlPatterns = {"/ServletAbos"})
 public class ServletAbos extends HttpServlet {
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireAbonnements gestionnaireAbonnements;
+
+    /**
+     *
+     */
     @EJB
     private GestionnaireUtilisateurs gestionnaireUtilisateurs;
 

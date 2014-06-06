@@ -3,6 +3,10 @@ package utils;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ *
+ * @author Goys
+ */
 public abstract class MD5Hash {
 
     /**

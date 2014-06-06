@@ -9,9 +9,16 @@ import modeles.Instrument;
 import modeles.Morceau;
 import modeles.Piste;
 
+/**
+ *
+ * @author Goys
+ */
 @Stateless
 public class GestionnairePistes {
 
+    /**
+     *
+     */
     @PersistenceContext
     EntityManager em;
 

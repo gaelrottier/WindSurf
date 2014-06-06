@@ -13,12 +13,22 @@ import javax.servlet.http.HttpSession;
 import modeles.Morceau;
 import modeles.Utilisateur;
 
+/**
+ *
+ * @author Goys
+ */
 @WebServlet(name = "ServletAchat", urlPatterns = {"/ServletAchat"})
 public class ServletAchat extends HttpServlet {
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireUtilisateurs gestionnaireUtilisateurs;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireMorceaux gestionnaireMorceaux;
 

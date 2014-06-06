@@ -20,18 +20,34 @@ import modeles.Morceau;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+/**
+ *
+ * @author Goys
+ */
 @WebServlet(name = "ServletRecherche", urlPatterns = {"/ServletRecherche"})
 public class ServletRecherche extends HttpServlet {
 
+    /**
+     *
+     */
     @EJB
     GestionnaireArtistes gestionnaireArtistes;
 
+    /**
+     *
+     */
     @EJB
     GestionnaireMorceaux gestionnaireMorceaux;
 
+    /**
+     *
+     */
     @EJB
     GestionnaireGenres gestionnaireGenres;
 
+    /**
+     *
+     */
     @EJB
     GestionnaireInstruments gestionnaireInstruments;
 

@@ -15,9 +15,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import gestionnaires.GestionnaireUtilisateurs;
 
+/**
+ *
+ * @author Goys
+ */
 @WebServlet(name = "ServletUsers", urlPatterns = {"/ServletUsers"})
 public class ServletUsers extends HttpServlet {
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireUtilisateurs gestionnaireUtilisateurs;
 

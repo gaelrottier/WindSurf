@@ -6,54 +6,118 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ *
+ * @author Goys
+ */
 @Entity
 public class Abonnement implements Serializable {
 
+    /**
+     *
+     */
     private static final long serialVersionUID = 1L;
+
+    /**
+     *
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    /**
+     *
+     */
     private double prix;
+
+    /**
+     *
+     */
     private String nom;
+
+    /**
+     *
+     */
     private int duree; // En jours
 
+    /**
+     *
+     */
     public Abonnement() {
     }
 
+    /**
+     *
+     * @param prix
+     * @param nom
+     * @param duree
+     */
     public Abonnement(double prix, String nom, int duree) {
         this.prix = prix;
         this.nom = nom;
         this.duree = duree;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return
+     */
     public double getPrix() {
         return prix;
     }
 
+    /**
+     *
+     * @param prix
+     */
     public void setPrix(double prix) {
         this.prix = prix;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getNom() {
         return nom;
     }
 
+    /**
+     *
+     * @param nom
+     */
     public void setNom(String nom) {
         this.nom = nom;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getDuree() {
         return duree;
     }
 
+    /**
+     *
+     * @param duree
+     */
     public void setDuree(int duree) {
         this.duree = duree;
     }

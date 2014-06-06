@@ -8,9 +8,16 @@ import javax.persistence.Query;
 import modeles.Genre;
 import modeles.Morceau;
 
+/**
+ *
+ * @author Goys
+ */
 @Stateless
 public class GestionnaireGenres {
 
+    /**
+     *
+     */
     @PersistenceContext
     EntityManager em;
 

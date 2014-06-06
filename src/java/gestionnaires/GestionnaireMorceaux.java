@@ -12,15 +12,28 @@ import modeles.Instrument;
 import modeles.Morceau;
 import modeles.Piste;
 
+/**
+ *
+ * @author Goys
+ */
 @Stateless
 public class GestionnaireMorceaux {
 
+    /**
+     *
+     */
     @PersistenceContext
     private EntityManager em;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireGenres gestionnaireGenres;
 
+    /**
+     *
+     */
     @EJB
     private GestionnaireArtistes gestionnaireArtistes;
 
